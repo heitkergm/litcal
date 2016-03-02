@@ -8,7 +8,7 @@
     <packaging>war</packaging>
 
     <name>litcal</name>
-    
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -22,12 +22,13 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>6.16</checkstyle.version>
         <javassist.version>3.20.0-GA</javassist.version>
+        <logback.version>1.1.6</logback.version>
         <slf4j.version>1.7.18</slf4j.version>
         <spring-session.version>1.1.0.RELEASE</spring-session.version>
         <webjars-locator.version>0.30</webjars-locator.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>javax.inject</groupId>
