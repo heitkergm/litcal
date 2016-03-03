@@ -1,9 +1,8 @@
 package com.dappermoose.litcal.init;
 
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.TimeZone;
-
-import org.apache.catalina.Context;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +11,9 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
@@ -42,8 +44,26 @@ public class Application
         {
             System.out.println (beanName);
         }
+
+        sendStartupEmail (ctx);
     }
-    
+
+    private static void sendStartupEmail (final ApplicationContext ctx)
+    {
+        MailSender mailer = ctx.getBean (MailSender.class);
+        SimpleMailMessage msg = new SimpleMailMessage ();
+        Environment env = ctx.getEnvironment ();
+
+        if (env.containsProperty ("mail.to"))
+        {
+            msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
+            msg.setTo (env.getProperty ("mail.to"));
+            msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
+            msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
+            mailer.send (msg);
+        }
+    }
+
     /**
      * This sets up the embedded tomcat server.
      *
@@ -52,15 +72,8 @@ public class Application
     @Bean
     public EmbeddedServletContainerFactory servletContainer ()
     {
-        TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory ()
-        {
-            @Override
-            protected void postProcessContext (final Context context)
-            {
-            }
-        };
-               
+        TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory ();
+
         return tomcat;
     }
 }
-
