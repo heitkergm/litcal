@@ -4,6 +4,9 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -11,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dappermoose.litcal.formbean.Litcal;
 
@@ -20,8 +22,10 @@ import com.dappermoose.litcal.formbean.Litcal;
  * The Class LitcalAction.
  */
 @Controller
-public class LitcalAction
+public class CalendarAction
 {
+    private static final Logger LOG = LoggerFactory.getLogger (CalendarAction.class.getName ());
+
     /** The message source. */
     @Inject
     private MessageSource messageSource;
@@ -30,21 +34,7 @@ public class LitcalAction
     private ApplicationContext context;
 
     /**
-     * Main action. Display the form.
-     *
-     * @param model the model
-     * @return the string
-     */
-    @RequestMapping (value = "/main", method = RequestMethod.GET)
-    public String mainAction (final Model model)
-    {
-        Litcal litcal = new Litcal ();
-        model.addAttribute ("litcal", litcal);
-        return "main";
-    }
-
-    /**
-     * Process register action.
+     * Process the make calendar action action.
      *
      * @param litcal the formbean
      * @param res the res
@@ -52,8 +42,8 @@ public class LitcalAction
      * @param request the request
      * @return the string
      */
-    @RequestMapping (value = "/main", method = RequestMethod.POST)
-    public String processLitcalAction (
+    @RequestMapping (value = "/calendar")
+    public String processCalendarAction (
             @Valid @ModelAttribute ("litcal") final Litcal litcal,
             final BindingResult res, final Model model,
             final HttpServletRequest request)
@@ -64,6 +54,8 @@ public class LitcalAction
             return "main";
         }
 
+        LOG.debug ("year is " + litcal.getYear ());
+        model.addAttribute ("year", litcal.getYear ());
         return "calendar";
     }
 }

@@ -5,13 +5,17 @@
       xmlns="http://www.w3.org/1999/xhtml"
       layout:decorator="decorator">
 <head>
-<title th:text="#{main.title}"></title>
+<title th:text="#{calendar.title}"></title>
 </head>
 <body>
     <div layout:fragment="content">
         <div class="center">
-		<p th:text="#{calendar.header}">
-		</p>
+            <p> <span th:text="#{calendar.header}"/> <span th:text="${year}"/>
+            </p>
+            <p>
+                <a href="main" class="pure-button pure-button-primary" th:href="@{/main}"
+                   th:text="#{calendar.main}"></a>
+            </p>
 	</div>
     </div>
 </body>

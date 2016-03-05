@@ -12,10 +12,10 @@
         <div class="center">
 		<p th:text="#{main.header}">
 		</p>
-		<form th:object="${litcal}" method="POST" autocomplete="off"
-			action="main"
+		<form th:object="${litcal}" autocomplete="off"
+			action="calendar"
 			id="litcal-form" name="litcalform"
-                        th:action="@{/main}"
+                        th:action="@{/calendar}"
 			class="pure-form pure-form-aligned">
 			<fieldset>
 			    <div class="pure-control-group">

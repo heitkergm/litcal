@@ -20,17 +20,17 @@
     </head>
     <body>
         <div class="center pure-menu pure-menu-horizontal">
-        <a href="meni" class="pure-menu-heading" th:href="@{/main}">
+        <a href="main" class="pure-menu-heading" th:href="@{/main}">
             <span class="bold"> <span th:text="#{decorator.header}"></span>
                 <i class="fa fa-calendar fa-lg"></i></span>
         </a>
             <span layout:fragment="menu">
         <ul  class="pure-menu-list">
                 <li class="pure-menu-item">
-                        <a href="?theme=black" class="pure-menu-link"
+                        <a onclick="addTheme('blue', 'black')" class="pure-menu-link"
                            th:text="#{decorator.theme.black}"
                            th:if="${#themes.code('name')} == 'blue'"></a>
-                        <a href="?theme=blue" class="pure-menu-link"
+                        <a onclick="addTheme('black', 'blue')" class="pure-menu-link"
                            th:text="#{decorator.theme.blue}"
                            th:if="${#themes.code('name')} == 'black'">
                         </a>
@@ -42,6 +42,40 @@
     <div class="center">
         <p th:utext="#{decorator.footer}">footer</p>
     </div>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            function addTheme(oldColor, newColor)
+            {
+                var url = window.location.href;
+                if(url.indexOf('?')=== -1)
+                {
+                    window.location.href = url + "?theme=" + newColor;
+                }
+                else
+                {
+                    var oldParam = "?theme=" + oldColor;
+                    var newParam = "?theme=" + newColor;
+                    if (url.indexOf(oldParam) >= 0)
+                    {
+                        window.location.href = url.replace(oldParam, newParam);
+                    }
+                    else
+                    {
+                        oldParam = "&theme=" + oldColor;
+                        newParam = "&theme=" + newColor;
+                        if(url.indexOf(oldParam) >= 0)
+                        {
+                            window.location.href = url.replace(oldParam, newParam);
+                        }
+                        else
+                        {
+                            window.location.href = url + newParam;
+                        }
+                    }
+                }
+            }
+            /* ]]> */
+        </script>
     <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
