@@ -22,12 +22,11 @@
         <div class="center pure-menu pure-menu-horizontal">
         <a href="meni" class="pure-menu-heading" th:href="@{/main}">
             <span class="bold"> <span th:text="#{decorator.header}"></span>
-                <i class="fa fa-money fa-lg"></i></span>
+                <i class="fa fa-calendar fa-lg"></i></span>
         </a>
             <span layout:fragment="menu">
         <ul  class="pure-menu-list">
-                <li class="pure-menu-item"
-                    th:if="${#authorization.expression('isAuthenticated()')}">
+                <li class="pure-menu-item">
                         <a href="?theme=black" class="pure-menu-link"
                            th:text="#{decorator.theme.black}"
                            th:if="${#themes.code('name')} == 'blue'"></a>
@@ -36,18 +35,6 @@
                            th:if="${#themes.code('name')} == 'black'">
                         </a>
                 </li>
-                 <li class="pure-menu-item"
-                     th:if="${#authorization.expression('isAuthenticated()')}">
-                     <a href="changepwd" class="pure-menu-link"
-                        th:href="@{/changepwd}"
-                        th:text="#{decorator.changepwd}"></a>
-                </li>
-                <li class="pure-menu-item"
-                    th:if="${#authorization.expression('isAuthenticated()')}">
-                    <a onclick="document.logoutForm.submit()" class="pure-menu-link"
-                       th:text="#{decorator.logout}">
-                    </a>
-               </li>
         </ul>
             </span>
     </div>
@@ -55,5 +42,6 @@
     <div class="center">
         <p th:utext="#{decorator.footer}">footer</p>
     </div>
+    <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>

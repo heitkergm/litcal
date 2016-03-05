@@ -12,19 +12,18 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-import org.springframework.web.servlet.theme.SessionThemeResolver;
+import org.springframework.web.servlet.theme.CookieThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class SpringWebConfig.
  */
-@ComponentScan (basePackages = { "com.dappermoose.litcal.data",
+@ComponentScan (basePackages = { "com.dappermoose.litcal.formbean",
         "com.dappermoose.litcal.action",
-        "com.dappermoose.litcal.init",
-        "com.dappermoose.litcal.security" })
+        "com.dappermoose.litcal.init" })
 @Configuration
 public class SpringWebConfig extends WebMvcConfigurerAdapter
 {
@@ -105,14 +104,14 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
     }
 
     /**
-     * Session locale resolver.
+     * Cookie locale resolver.
      *
-     * @return the session locale resolver
+     * @return the cookie locale resolver
      */
     @Bean
-    SessionLocaleResolver localeResolver ()
+    CookieLocaleResolver localeResolver ()
     {
-        final SessionLocaleResolver resolver = new SessionLocaleResolver ();
+        final CookieLocaleResolver resolver = new CookieLocaleResolver ();
         return resolver;
     }
 
@@ -131,14 +130,14 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
     }
 
     /**
-     * Session theme resolver.
+     * Cookie theme resolver.
      *
-     * @return the session theme resolver
+     * @return the cookie theme resolver
      */
     @Bean
-    SessionThemeResolver themeResolver ()
+    CookieThemeResolver themeResolver ()
     {
-        final SessionThemeResolver resolver = new SessionThemeResolver ();
+        final CookieThemeResolver resolver = new CookieThemeResolver ();
         resolver.setDefaultThemeName ("blue");
         return resolver;
     }
@@ -154,14 +153,14 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
     {
         return new PersistenceExceptionTranslationPostProcessor ();
     }
-    
+
     /**
      * Bean for calendar data.
-     * 
+     *
      * <p>Make the bean containing the "database" of calendar dates.</p>
-     * 
+     *
      * @return the bean
-     * 
+     *
      */
     @Bean (name = "CalendarData")
     public String calendarData ()
