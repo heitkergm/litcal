@@ -11,6 +11,8 @@
     <div layout:fragment="content">
         <div class="center">
             <p> <span th:text="#{calendar.header}"/> <span th:text="${year}"/>
+                <span th:if="${isLeapYear}">Leap Year</span>
+                <span th:if="${!isLeapYear}">Not Leap Year</span>
             </p>
             <p>
                 <a href="main" class="pure-button pure-button-primary" th:href="@{/main}"

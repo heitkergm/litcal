@@ -18,19 +18,19 @@ public final class DateUtilities
      * @param year the year to evaluate
      * @return true/false, depending on whether a leap year or not.
      */
-    public static boolean isLeapYear (final int year)
+    public static Boolean isLeapYear (final int year)
     {
-        boolean retVal = false;
+        Boolean retVal = Boolean.FALSE;
 
         if (year % 400 == 0)
         {
-            retVal = true;
+            retVal = Boolean.TRUE;
         }
         else
         {
             if ((year % 100 != 0) && (year % 4 == 0))
             {
-                retVal = true;
+                retVal = Boolean.TRUE;
             }
         }
 
