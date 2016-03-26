@@ -20,14 +20,14 @@
         <java.version>1.8</java.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>6.16.1</checkstyle.version>
+        <checkstyle.version>6.17</checkstyle.version>
         <jackson.version>2.7.3</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <logback.version>1.1.6</logback.version>
         <slf4j.version>1.7.19</slf4j.version>
         <snakeyaml.version>1.17</snakeyaml.version>
         <spring-session.version>1.1.0.RELEASE</spring-session.version>
-        <tomcat.version>8.0.33</tomcat.version>
+        <tomcat.version>8.5.0</tomcat.version>
         <webjars-locator.version>0.30</webjars-locator.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
@@ -285,6 +285,22 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jboss.tattletale</groupId>
+                <artifactId>tattletale-maven</artifactId>
+                <version>1.2.0.Beta2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>${basedir}/target/litcal-${project.version}</source>
+                    <destination>${basedir}/target/tattletale-report</destination>
+                </configuration>
             </plugin>
         </plugins>
     </build>
