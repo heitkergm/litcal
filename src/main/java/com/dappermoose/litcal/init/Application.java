@@ -14,13 +14,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
  * This is the class containing the main program for spring boot.
  */
 @SpringBootApplication
-@EnableRedisHttpSession
 @ServletComponentScan
 public class Application
 {
