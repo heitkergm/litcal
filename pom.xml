@@ -23,8 +23,8 @@
         <checkstyle.version>6.17</checkstyle.version>
         <jackson.version>2.7.3</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
-        <logback.version>1.1.6</logback.version>
-        <slf4j.version>1.7.19</slf4j.version>
+        <logback.version>1.1.7</logback.version>
+        <slf4j.version>1.7.20</slf4j.version>
         <snakeyaml.version>1.17</snakeyaml.version>
         <tomcat.version>8.5.0</tomcat.version>
         <webjars-locator.version>0.30</webjars-locator.version>
