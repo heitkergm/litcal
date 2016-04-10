@@ -41,6 +41,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jul-to-slf4j</artifactId>
+                </exclusion>
+            </exclusions>
        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -228,6 +234,7 @@
                                         <exclude>xml-apis</exclude>
                                         <exclude>javax.activation</exclude>
                                         <exclude>org.slf4j:slf4j-simple</exclude>
+                                        <exclude>org.slf4j:jul-to-sl4j</exclude>
                                     </excludes>
                                 </bannedDependencies>
                             </rules>
