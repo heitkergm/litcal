@@ -6,6 +6,7 @@ import java.util.TimeZone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -18,7 +19,7 @@ import org.springframework.mail.SimpleMailMessage;
 /**
  * This is the class containing the main program for spring boot.
  */
-@SpringBootApplication
+@SpringBootApplication (exclude = {ThymeleafAutoConfiguration.class})
 @ServletComponentScan
 public class Application
 {
