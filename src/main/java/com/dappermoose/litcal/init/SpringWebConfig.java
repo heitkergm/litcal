@@ -220,6 +220,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
     {
         SpringTemplateEngine engine = new SpringTemplateEngine ();
         engine.setTemplateResolver (templateResolver ());
+        engine.setEnableSpringELCompiler (true);
 
         return engine;
     }
