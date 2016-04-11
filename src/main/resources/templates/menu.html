@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>><title></title></head>
+    <body>
+        <div th:fragment="menu">
+             <a onclick="addTheme('blue', 'black')" class="pure-menu-link"
+                th:text="#{decorator.theme.black}"
+                th:if="${#themes.code('name')} == 'blue'"></a>
+             <a onclick="addTheme('black', 'blue')" class="pure-menu-link"
+                th:text="#{decorator.theme.blue}"
+                th:if="${#themes.code('name')} == 'black'"></a>
+        </div>
+    </body>
+</html>

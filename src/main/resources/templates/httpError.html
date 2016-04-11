@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns="http://www.w3.org/1999/xhtml"
-      layout:decorator="decorator">
+      xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,8 +8,7 @@
     </title>
 </head>
     <body>
-        <span layout:fragment="menu"></span>
-        <div layout:fragment="content">
+        <div id="content">
 <div class="center">
     <h1 th:text="#{error.header}" ></h1>
     <p th:text="#{httpError.text}" ></p>
@@ -19,5 +16,9 @@
 <p><span th:text="#{httpError.reason}" /> <span th:text="${reason}"/></p>
 </div>
         </div>
+    <div id="footerhtml"><div th:include="footer::footer"></div></div>
+    <div id="headerhtml" th:include="header::header"></div>
+    <div id="menuhtml"></div>
+    <div id="linkhtml" th:include="link::link"></div>
     </body>
 </html>
