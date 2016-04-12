@@ -275,6 +275,7 @@
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
                             <linkXRef>false</linkXRef>
+                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
                         </configuration>
                         <goals>
                             <goal>check</goal>
@@ -288,11 +289,12 @@
                 <version>3.0.3</version>
                 <configuration>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
+                    <includeTests>true</includeTests>
                 </configuration>
                 <executions>
                     <execution>
                         <id>validate</id>
-                        <phase>process-classes</phase>
+                        <phase>process-test-classes</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>

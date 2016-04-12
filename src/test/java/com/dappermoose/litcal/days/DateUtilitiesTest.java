@@ -2,54 +2,113 @@ package com.dappermoose.litcal.days;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
- *  Test the DateUtilities class
+ *  Test the DateUtilities class.
  * @author matt
  */
 public class DateUtilitiesTest
 {
-
-    public DateUtilitiesTest()
-    {
-    }
-
-    @BeforeClass
-    public static void setUpClass()
-    {
-    }
-
-    @AfterClass
-    public static void tearDownClass()
-    {
-    }
-
-    @Before
-    public void setUp()
-    {
-    }
-
-    @After
-    public void tearDown()
+    /**
+     * Dummy constructor.
+     */
+    public DateUtilitiesTest ()
     {
     }
 
     /**
-     * Test of isLeapYear method, of class DateUtilities.
+     * setup before class instantiation.
+     */
+    @BeforeClass
+    public static void setUpClass ()
+    {
+    }
+
+    /**
+     * class tear down when done with all tests.
+     */
+    @AfterClass
+    public static void tearDownClass ()
+    {
+    }
+
+    /**
+     * Setup before each test.
+     */
+    @Before
+    public void setUp ()
+    {
+    }
+
+    /**
+     * Tear down after each test.
+     */
+    @After
+    public void tearDown ()
+    {
+    }
+
+    /**
+     * Test of isLeapYear method, with 1900.
      */
     @Test
-    public void testIsLeapYear()
+    public void testIsLeapYear1900 ()
     {
-        System.out.println("isLeapYear");
-        assertEquals (false, DateUtilities.isLeapYear (1900));
-        assertEquals (true, DateUtilities.isLeapYear (2000));
-        assertEquals (true, DateUtilities.isLeapYear (2016));
-        assertEquals (false, DateUtilities.isLeapYear (2013));
-        assertEquals (false, DateUtilities.isLeapYear (2014));
-        assertEquals (false, DateUtilities.isLeapYear (2015));
+        System.out.println ("isLeapYear - 1900");
+        Assert.assertEquals (false, DateUtilities.isLeapYear (1900));
+    }
+
+    /**
+     * Test of isLeapYear method, with 2000.
+     */
+    @Test
+    public void testIsLeapYear2000 ()
+    {
+        System.out.println ("isLeapYear - 2000");
+        Assert.assertEquals (true, DateUtilities.isLeapYear (2000));
+    }
+
+    /**
+     * Test of isLeapYear method, with 2016.
+     */
+    @Test
+    public void testIsLeapYear2016 ()
+    {
+        System.out.println ("isLeapYear - 2016");
+        Assert.assertEquals (true, DateUtilities.isLeapYear (2016));
+    }
+
+    /**
+     * Test of isLeapYear method, with 2013.
+     */
+    @Test
+    public void testIsLeapYear2013 ()
+    {
+        System.out.println ("isLeapYear - 2013");
+        Assert.assertEquals (false, DateUtilities.isLeapYear (2013));
+    }
+
+    /**
+     * Test of isLeapYear method, with 2014.
+     */
+    @Test
+    public void testIsLeapYear2014 ()
+    {
+        System.out.println ("isLeapYear - 2014");
+        Assert.assertEquals (false, DateUtilities.isLeapYear (2014));
+    }
+
+    /**
+     * Test of isLeapYear method, with 2015.
+     */
+    @Test
+    public void testIsLeapYear2015 ()
+    {
+        System.out.println ("isLeapYear - 2015");
+        Assert.assertEquals (false, DateUtilities.isLeapYear (2015));
     }
 }
