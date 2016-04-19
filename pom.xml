@@ -21,6 +21,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>6.17</checkstyle.version>
+        <ehcache.version>2.10.2</ehcache.version>
         <jackson.version>2.7.3</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <logback.version>1.1.7</logback.version>
@@ -29,7 +30,7 @@
         <spring-data-releasetrain.version>Hopper-SR1</spring-data-releasetrain.version>
         <thymeleaf.version>3.0.0.BETA03</thymeleaf.version>
         <tomcat.version>8.5.0</tomcat.version>
-        <webjars-locator.version>0.30</webjars-locator.version>
+        <webjars-locator.version>0.31</webjars-locator.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
 
@@ -124,7 +125,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery-validation</artifactId>
-            <version>1.14.0-1</version>
+            <version>1.15.0</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
