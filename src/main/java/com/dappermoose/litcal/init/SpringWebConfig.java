@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
@@ -164,18 +163,6 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
         final CookieThemeResolver resolver = new CookieThemeResolver ();
         resolver.setDefaultThemeName ("blue");
         return resolver;
-    }
-
-    // beans for tx/database
-    /**
-     * Persistence post processor.
-     *
-     * @return the persistence exception translation post processor
-     */
-    @Bean
-    public PersistenceExceptionTranslationPostProcessor persistencePostProcessor ()
-    {
-        return new PersistenceExceptionTranslationPostProcessor ();
     }
 
     /**
