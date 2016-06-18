@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml"
+      layout:decorator="decorator">
 <head>
 <title th:text="#{main.title}"></title>
 </head>
 <body>
-    <div id="content">
+    <div layout:fragment="content">
         <div class="center">
 		<p th:text="#{main.header}">
 		</p>
@@ -72,9 +76,5 @@
     });
         </script>
     </div>
-    <div id="footerhtml"><div th:include="footer::footer"></div></div>
-    <div id="headerhtml" th:include="header::header"></div>
-    <div id="menuhtml" th:include="menu::menu"></div>
-    <div id="linkhtml" th:include="link::link"></div>
 </body>
 </html>
