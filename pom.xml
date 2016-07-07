@@ -21,11 +21,10 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>7.0</checkstyle.version>
-        <groovy.version>2.4.7</groovy.version>
         <jackson.version>2.7.5</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <snakeyaml.version>1.17</snakeyaml.version>
-        <spring.version>4.3.0.RELEASE</spring.version>
+        <spring.version>4.3.1.RELEASE</spring.version>
         <thymeleaf-layout-dialect.version>1.4.0</thymeleaf-layout-dialect.version>
         <tomcat.version>9.0.0.M8</tomcat.version>
         <tomcat-logging.version>9.0.0.M6</tomcat-logging.version>
