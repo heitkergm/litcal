@@ -25,7 +25,8 @@
         <javassist.version>3.20.0-GA</javassist.version>
         <snakeyaml.version>1.17</snakeyaml.version>
         <spring.version>4.3.1.RELEASE</spring.version>
-        <thymeleaf-layout-dialect.version>1.4.0</thymeleaf-layout-dialect.version>
+        <thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
+        <thymeleaf-layout-dialect.version>2.0.0</thymeleaf-layout-dialect.version>
         <tomcat.version>9.0.0.M8</tomcat.version>
         <tomcat-logging.version>9.0.0.M6</tomcat-logging.version>
         <webjars-locator.version>0.32</webjars-locator.version>
