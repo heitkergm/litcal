@@ -21,6 +21,7 @@ import org.springframework.web.servlet.theme.CookieThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
 import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
@@ -201,7 +202,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
         engine.setTemplateResolver (templateResolver ());
         engine.setEnableSpringELCompiler (true);
         engine.addDialect (new LayoutDialect ());
-
+        engine.addDialect (new Java8TimeDialect ());
         return engine;
     }
 
