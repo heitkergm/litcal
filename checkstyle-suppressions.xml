@@ -6,5 +6,5 @@
 <suppressions>
     <suppress checks="UncommentedMain"
              files="Application.java"
-             lines="32"/>
+             lines="31"/>
 </suppressions>
