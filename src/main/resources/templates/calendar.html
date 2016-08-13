@@ -20,10 +20,14 @@
                 <span th:text="#{${'day.name' + xmasDay}}"></span>
             </p>
             <p>
+                <span th:if="${easterDay le 31}" th:text="'Easter Day is March ' + ${easterDay}"></span>
+                <span th:if="${easterDay gt 31}" th:text="'Easter Day is April ' + ${easterDay - 31}"></span>
+            </p>
+           <p>
                 <a href="main" class="pure-button pure-button-primary" th:href="@{/main}"
                    th:text="#{calendar.main}"></a>
             </p>
-	</div>
+ 	</div>
     </div>
 </body>
 </html>
