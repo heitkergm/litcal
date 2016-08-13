@@ -8,7 +8,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- *  Test the DateUtilities class.
+ *  Test the LeapYear class.
  * @author matt
  */
 public class LeapYearTest

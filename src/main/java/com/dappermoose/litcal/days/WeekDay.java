@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class WeekDay
 {
-    private static Logger myLOG = LoggerFactory.getLogger (WeekDay.class);
+    private static final Logger LOG = LoggerFactory.getLogger (WeekDay.class);
 
     private WeekDay ()
     {
@@ -42,16 +42,16 @@ public final class WeekDay
         {
             m -= 2;
         }
-        myLOG.debug ("WeekDay.m " + m);
+        LOG.debug ("WeekDay.m " + m);
         int c = y / 100;
-        myLOG.debug ("WeekDay.c " + c);
+        LOG.debug ("WeekDay.c " + c);
         int a = y % 100;
-        myLOG.debug ("WeekDay.a " + a);
+        LOG.debug ("WeekDay.a " + a);
         int b = ((13 * m) - 1) / 5 + (a / 4) + (c / 4);
-        myLOG.debug ("WeekDay.b" + b);
+        LOG.debug ("WeekDay.b" + b);
 
         retVal = (b + a + day - (2 * c)) % 7;
-        myLOG.debug ("WeekDay.retVal " + retVal);
+        LOG.debug ("WeekDay.retVal " + retVal);
 
         return retVal;
     }

@@ -8,15 +8,15 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- *  Test the WeekDay class.
+ *  Test the EasterDay class.
  * @author matt
  */
-public class WeekDayTest
+public class EasterDayTest
 {
     /**
      * Dummy constructor.
      */
-    public WeekDayTest ()
+    public EasterDayTest ()
     {
     }
 
@@ -53,22 +53,12 @@ public class WeekDayTest
     }
 
     /**
-     * Test of calcDate method, with 2016/08/12.
+     * Test of calcEaster method, with 2016.
      */
     @Test
-    public void testCalcDateWeekDayFri20160812 ()
+    public void testCalcDateEaster2016 ()
     {
-        System.out.println ("calcDate - 2016/08/12");
-        Assert.assertEquals (5, WeekDay.calcWeekDate (2016, 8, 12));
-    }
-
-    /**
-     * Test of calDate method, with 2000/01/01.
-     */
-    @Test
-    public void testCalcDateWeekDayFri20160101 ()
-    {
-        System.out.println ("calcDate - 2016/01/01");
-        Assert.assertEquals (5, WeekDay.calcWeekDate (2016, 1, 1));
+        System.out.println ("calcDateEaster - 2016");
+        Assert.assertEquals (27, EasterDay.calcEaster (2016));
     }
 }
