@@ -11,12 +11,12 @@ import org.junit.Test;
  *  Test the DateUtilities class.
  * @author matt
  */
-public class DateUtilitiesTest
+public class LeapYearTest
 {
     /**
      * Dummy constructor.
      */
-    public DateUtilitiesTest ()
+    public LeapYearTest ()
     {
     }
 
@@ -59,7 +59,7 @@ public class DateUtilitiesTest
     public void testIsLeapYear1900 ()
     {
         System.out.println ("isLeapYear - 1900");
-        Assert.assertEquals (false, DateUtilities.isLeapYear (1900));
+        Assert.assertFalse (LeapYear.isLeapYear (1900));
     }
 
     /**
@@ -69,7 +69,7 @@ public class DateUtilitiesTest
     public void testIsLeapYear2000 ()
     {
         System.out.println ("isLeapYear - 2000");
-        Assert.assertEquals (true, DateUtilities.isLeapYear (2000));
+        Assert.assertTrue (LeapYear.isLeapYear (2000));
     }
 
     /**
@@ -79,7 +79,7 @@ public class DateUtilitiesTest
     public void testIsLeapYear2016 ()
     {
         System.out.println ("isLeapYear - 2016");
-        Assert.assertEquals (true, DateUtilities.isLeapYear (2016));
+        Assert.assertTrue (LeapYear.isLeapYear (2016));
     }
 
     /**
@@ -89,7 +89,7 @@ public class DateUtilitiesTest
     public void testIsLeapYear2013 ()
     {
         System.out.println ("isLeapYear - 2013");
-        Assert.assertEquals (false, DateUtilities.isLeapYear (2013));
+        Assert.assertFalse (LeapYear.isLeapYear (2013));
     }
 
     /**
@@ -99,7 +99,7 @@ public class DateUtilitiesTest
     public void testIsLeapYear2014 ()
     {
         System.out.println ("isLeapYear - 2014");
-        Assert.assertEquals (false, DateUtilities.isLeapYear (2014));
+        Assert.assertFalse (LeapYear.isLeapYear (2014));
     }
 
     /**
@@ -109,6 +109,6 @@ public class DateUtilitiesTest
     public void testIsLeapYear2015 ()
     {
         System.out.println ("isLeapYear - 2015");
-        Assert.assertEquals (false, DateUtilities.isLeapYear (2015));
+        Assert.assertFalse (LeapYear.isLeapYear (2015));
     }
 }

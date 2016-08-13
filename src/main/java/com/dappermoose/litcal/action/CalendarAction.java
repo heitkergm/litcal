@@ -15,7 +15,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.dappermoose.litcal.days.DateUtilities;
+import com.dappermoose.litcal.days.LeapYear;
+import com.dappermoose.litcal.days.WeekDay;
 import com.dappermoose.litcal.formbean.Litcal;
 
 // TODO: Auto-generated Javadoc
@@ -58,7 +59,9 @@ public class CalendarAction
         Integer year = litcal.getYear ();
         LOG.debug ("year is " + year);
         model.addAttribute ("year", year);
-        model.addAttribute ("isLeapYear", DateUtilities.isLeapYear (year));
+        model.addAttribute ("isLeapYear", LeapYear.isLeapYear (year));
+        model.addAttribute ("weekDay", WeekDay.calcWeekDate (year, 1, 1));
+        model.addAttribute ("xmasDay", WeekDay.calcWeekDate (year, 12, 25));
         return "calendar";
     }
 }
