@@ -1,7 +1,6 @@
 package com.dappermoose.litcal.days;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * week day utility.
@@ -10,10 +9,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author matt
  */
+@Slf4j
 public final class WeekDay
 {
-    private static final Logger LOG = LoggerFactory.getLogger (WeekDay.class);
-
     private WeekDay ()
     {
     }
@@ -42,16 +40,16 @@ public final class WeekDay
         {
             m -= 2;
         }
-        LOG.debug ("WeekDay.m " + m);
+        log.debug ("WeekDay.m " + m);
         int c = y / 100;
-        LOG.debug ("WeekDay.c " + c);
+        log.debug ("WeekDay.c " + c);
         int a = y % 100;
-        LOG.debug ("WeekDay.a " + a);
+        log.debug ("WeekDay.a " + a);
         int b = ((13 * m) - 1) / 5 + (a / 4) + (c / 4);
-        LOG.debug ("WeekDay.b" + b);
+        log.debug ("WeekDay.b" + b);
 
         retVal = (b + a + day - (2 * c)) % 7;
-        LOG.debug ("WeekDay.retVal " + retVal);
+        log.debug ("WeekDay.retVal " + retVal);
 
         return retVal;
     }

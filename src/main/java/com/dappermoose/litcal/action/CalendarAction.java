@@ -4,9 +4,6 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -20,15 +17,16 @@ import com.dappermoose.litcal.days.LeapYear;
 import com.dappermoose.litcal.days.WeekDay;
 import com.dappermoose.litcal.formbean.Litcal;
 
+import lombok.extern.slf4j.Slf4j;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class LitcalAction.
  */
 @Controller
+@Slf4j
 public class CalendarAction
 {
-    private static final Logger LOG = LoggerFactory.getLogger (CalendarAction.class.getName ());
-
     /** The message source. */
     @Inject
     private MessageSource messageSource;
@@ -58,7 +56,7 @@ public class CalendarAction
         }
 
         Integer year = litcal.getYear ();
-        LOG.debug ("year is " + year);
+        log.debug ("year is " + year);
         model.addAttribute ("year", year);
         model.addAttribute ("isLeapYear", LeapYear.isLeapYear (year));
         model.addAttribute ("weekDay", WeekDay.calcWeekDate (year, 1, 1));

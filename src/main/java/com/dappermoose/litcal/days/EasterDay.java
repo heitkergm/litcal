@@ -1,7 +1,6 @@
 package com.dappermoose.litcal.days;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * easter day utility.
@@ -10,10 +9,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author matt
  */
+@Slf4j
 public final class EasterDay
 {
-    private static final Logger LOG = LoggerFactory.getLogger (EasterDay.class);
-
     private EasterDay ()
     {
     }
@@ -57,7 +55,7 @@ public final class EasterDay
         }
 
         retVal = d + 7 - ((d + e) % 7);
-        LOG.debug ("EasterDay.retVal " + retVal);
+        log.debug ("EasterDay.retVal " + retVal);
 
         return retVal;
     }
