@@ -55,7 +55,7 @@ public final class EasterDay
         }
 
         retVal = d + 7 - ((d + e) % 7);
-        log.debug ("EasterDay.retVal " + retVal);
+        LOG.debug ("EasterDay.retVal " + retVal);
 
         return retVal;
     }
