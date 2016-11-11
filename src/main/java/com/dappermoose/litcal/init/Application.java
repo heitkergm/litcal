@@ -59,6 +59,9 @@ public class Application
         }
     }
 
+    /**
+     * protected constructor.
+     */
     protected Application ()
     {
     }
