@@ -6,11 +6,8 @@ import java.util.TimeZone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -62,16 +59,7 @@ public class Application
         }
     }
 
-    /**
-     * This sets up the embedded tomcat server.
-     *
-     * @return the customized embedded tomcat server
-     */
-    @Bean
-    public EmbeddedServletContainerFactory servletContainer ()
+    protected Application ()
     {
-        TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory ();
-
-        return tomcat;
     }
 }
