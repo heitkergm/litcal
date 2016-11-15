@@ -20,8 +20,8 @@ public final class EasterDay
      * determines the date of Easter given the input year.
      *
      * @param year the year to evaluate
-     * @return an integer. If <= 31, then in March on that date;
-     *                     if > 31, then in April on date - 31.
+     * @return an integer. If less than or equal to 31, then in March on that date;
+     *                     if greater than 31, then in April on date - 31.
      */
     public static int calcEaster (final int year)
     {
