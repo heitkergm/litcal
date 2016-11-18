@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
-import org.springframework.core.env.Environment;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 
@@ -47,15 +46,20 @@ public class Application
     {
         MailSender mailer = ctx.getBean (MailSender.class);
         SimpleMailMessage msg = new SimpleMailMessage ();
-        Environment env = ctx.getEnvironment ();
 
-        if (env.containsProperty ("mail.to"))
+        if (ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ()) == null)
         {
+            System.out.println ("mail.to message not defined");
+        }
+        else
+        {
+            System.out.println ("preparing email message");
             msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
-            msg.setTo (env.getProperty ("mail.to"));
+            msg.setTo (ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ()));
             msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
             msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
             mailer.send (msg);
+            System.out.println ("Sent email message");
         }
     }
 

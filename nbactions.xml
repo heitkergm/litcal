@@ -41,7 +41,6 @@
             </goals>
             <properties>
                 <netbeans.deploy>false</netbeans.deploy>
-                <mail.to>matt@localhost</mail.to>
             </properties>
         </action>
     </actions>
