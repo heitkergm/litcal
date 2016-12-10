@@ -45,7 +45,7 @@ public final class WeekDay
         LOG.debug ("WeekDay.c " + c);
         int a = y % 100;
         LOG.debug ("WeekDay.a " + a);
-        int b = ((13 * m) - 1) / 5 + (a / 4) + (c / 4);
+        int b = (13 * m - 1) / 5 + a / 4 + c / 4;
         LOG.debug ("WeekDay.b" + b);
 
         retVal = (b + a + day - (2 * c)) % 7;

@@ -1,11 +1,11 @@
 package com.dappermoose.litcal.action;
 
-import javax.inject.Inject;
+// import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.MessageSource;
+// import org.springframework.context.ApplicationContext;
+// import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -28,12 +28,13 @@ import lombok.extern.slf4j.Slf4j;
 public class CalendarAction
 {
     /** The message source. */
+    /*
     @Inject
     private MessageSource messageSource;
 
     @Inject
     private ApplicationContext context;
-
+    */
     /**
      * Process the make calendar action action.
      *

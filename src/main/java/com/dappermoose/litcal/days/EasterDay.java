@@ -27,19 +27,16 @@ public final class EasterDay
     {
         int retVal;
 
-        int bigC = (year / 100) + 1;
-        int g = ((3 * bigC) / 4) - 12;
-        int bigG = (year % 19) + 1;
-        int c = (((8 * bigC) + 5) / 25) - 5 - g;
-        int e = ((5 * year) / 4) - g - 10;
-        int bigE = ((11 * bigG) + 20  + c) % 30;
+        int bigC = year / 100 + 1;
+        int g = 3 * bigC / 4 - 12;
+        int bigG = year % 19 + 1;
+        int c = (8 * bigC + 5) / 25 - 5 - g;
+        int e = 5 * year / 4 - g - 10;
+        int bigE = (11 * bigG + 20  + c) % 30;
 
-        if (bigE != 25)
+        if (bigE != 25 && bigG > 11)
         {
-            if (bigG > 11)
-            {
-                bigE++;
-            }
+            bigE++;
         }
 
         if (bigE == 24)
