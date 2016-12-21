@@ -226,7 +226,7 @@
                                     <version>3.3.9</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>1.8.0-112</version>
+                                    <version>1.8.0-111</version>
                                 </requireJavaVersion>
                                 <bannedDependencies>
                                     <excludes>
