@@ -192,6 +192,10 @@
                     <showDeprecation>true</showDeprecation>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
                     <compilerId>javac-with-errorprone</compilerId>
+                    <useIncrementalCompilation>yes</useIncrementalCompilation>
+                    <compilerArgs>
+                        <arg>-Xpkginfo:always</arg>
+                    </compilerArgs>
                 </configuration>
                 <dependencies>
                     <dependency>
