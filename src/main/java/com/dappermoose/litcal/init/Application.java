@@ -1,6 +1,5 @@
 package com.dappermoose.litcal.init;
 
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.TimeZone;
 
@@ -30,16 +29,6 @@ public class Application
 
         System.setProperty ("spring.devtools.restart.enabled", "false");
         ApplicationContext ctx = SpringApplication.run (Application.class, args);
-
-        System.out.println ("Let's inspect the beans provided by Spring Boot:");
-
-        String[] beanNames = ctx.getBeanDefinitionNames ();
-        Arrays.sort (beanNames);
-        for (String beanName : beanNames)
-        {
-            System.out.println (beanName);
-        }
-
         sendStartupEmail (ctx);
     }
 
@@ -48,21 +37,21 @@ public class Application
         MailSender mailer = ctx.getBean (MailSender.class);
         SimpleMailMessage msg = new SimpleMailMessage ();
 
-        String recipient = System.getProperty ("mail.to");
+        String envProp = System.getenv ("MAIL_TO");
+        String recipient = (envProp != null ? envProp :
+                ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ()));
 
         if (recipient == null)
         {
-            System.out.println ("mail.to property not defined");
+            System.err.println ("mail.to property not defined and no MAIL_TO environment variable");
         }
         else
         {
-            System.out.println ("preparing email message");
             msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
             msg.setTo (recipient);
             msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
             msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
             mailer.send (msg);
-            System.out.println ("Sent email message to " + recipient);
         }
     }
 
