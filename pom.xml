@@ -15,6 +15,20 @@
         <version>1.4.4.RELEASE</version>
     </parent>
 
+    <profiles>
+        <profile>
+            <id>setting-env-mail-to</id>
+            <activation>
+                <property>
+                    <name>env.MAIL_TO</name>
+                </property>
+            </activation>
+            <properties>
+                <mail.to>${env.MAIL_TO}</mail.to>
+            </properties>
+        </profile>
+    </profiles>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -32,6 +46,7 @@
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
         <thymeleaf-layout-dialect.version>2.1.2</thymeleaf-layout-dialect.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
+        <mail.to>matt@localhost</mail.to>
     </properties>
 
     <dependencies>
@@ -140,9 +155,12 @@
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
-                    <!-- <jvmArguments>
+                    <jvmArguments>
+                        -Dmail.to=${mail.to}
+                        <!--
                         -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005
-                    </jvmArguments> -->
+                        -->
+                    </jvmArguments>
                 </configuration>
             </plugin>
             <plugin>

@@ -48,19 +48,21 @@ public class Application
         MailSender mailer = ctx.getBean (MailSender.class);
         SimpleMailMessage msg = new SimpleMailMessage ();
 
-        if (ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ()) == null)
+        String recipient = System.getProperty ("mail.to");
+
+        if (recipient == null)
         {
-            System.out.println ("mail.to message not defined");
+            System.out.println ("mail.to property not defined");
         }
         else
         {
             System.out.println ("preparing email message");
             msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
-            msg.setTo (ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ()));
+            msg.setTo (recipient);
             msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
             msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
             mailer.send (msg);
-            System.out.println ("Sent email message");
+            System.out.println ("Sent email message to " + recipient);
         }
     }
 
