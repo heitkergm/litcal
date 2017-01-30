@@ -22,7 +22,7 @@
         <assertj.version>3.6.2</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>7.4</checkstyle.version>
+        <checkstyle.version>7.5</checkstyle.version>
         <errorprone.version>2.8.1</errorprone.version>
         <errorprone-core.version>2.0.15</errorprone-core.version>
         <groovy.version>2.4.8</groovy.version>
@@ -233,7 +233,7 @@
                                     <version>3.3.9</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>1.8.0-111</version>
+                                    <version>1.8.0-121</version>
                                 </requireJavaVersion>
                                 <bannedDependencies>
                                     <excludes>
