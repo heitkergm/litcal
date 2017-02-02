@@ -25,6 +25,11 @@ appropriate javadoc directives.
 This project also includes the NetBeans project files.  NetBeans has the best
 maven integration, IMHO.
 
+It would be nice to have a mail agent listening on port 25, which would accept
+mail sent to "matt@localhost".
+
 To run, make sure nothing is using port 8080, and on the command line,
 
 **./mvnw spring-boot:run**
+
+Point your browser to [http://localhost:8080/litcal](http://localhost:8080/litcal)
