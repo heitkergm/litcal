@@ -28,7 +28,7 @@
         <groovy.version>2.4.8</groovy.version>
         <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
-        <logback.version>1.1.10</logback.version>
+        <logback.version>1.2.1</logback.version>
         <thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
         <thymeleaf-layout-dialect.version>2.1.2</thymeleaf-layout-dialect.version>
