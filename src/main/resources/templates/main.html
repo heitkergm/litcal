@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<html
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{decorator}">
+<html data-layout-decorate="~{decorator}">
 <head>
-<title th:text="#{main.title}"></title>
+<title data-th-text="#{main.title}"></title>
 </head>
 <body>
-    <div layout:fragment="content">
+    <div data-layout-fragment="content">
         <div class="center">
-		<p th:text="#{main.header}">
+		<p data-th-text="#{main.header}">
 		</p>
-		<form th:object="${litcal}" autocomplete="off"
+		<form data-th-object="${litcal}" autocomplete="off"
 			action="calendar"
 			id="litcal-form" name="litcalform"
-                        th:action="@{/calendar}"
+                        data-th-action="@{/calendar}"
 			class="pure-form pure-form-aligned">
 			<fieldset>
 			    <div class="pure-control-group">
-				    <label th:text="#{main.year}"></label>
-				    <input th:field="*{year}" min="2000"
+				    <label data-th-text="#{main.year}"></label>
+				    <input data-th-field="*{year}" min="2000"
                                            required="true" type="number"
                                            size="4" maxlength="4" />
 				</div>
 				<div class="pure-controls">
                                     <p class="error" id="errors">
-                                            <span th:errors="*{all}"></span></p>
+                                            <span data-th-errors="*{all}"></span></p>
  				    <button class="pure-button pure-button-primary button-small" type="submit"
-                                            th:text="#{main.button}">
+                                            data-th-text="#{main.button}">
 			            </button>
                 </div>
 			</fieldset>
 		</form>
 	</div>
 
-	<script src="webjars/jquery/jquery.min.js" th:src="@{/webjars/jquery/jquery.min.js}"
+	<script src="webjars/jquery/jquery.min.js" data-th-src="@{/webjars/jquery/jquery.min.js}"
                 type="text/javascript"></script>
 	<script src="webjars/jquery-validation/jquery.validate.min.js"
-                th:src="@{/webjars/jquery-validation/jquery.validate.min.js}"
+                data-th-src="@{/webjars/jquery-validation/jquery.validate.min.js}"
                 type="text/javascript"></script>
-	<script type="text/javascript" th:inline="javascript">
+	<script type="text/javascript" data-th-inline="javascript">
 	    document.getElementById('year').focus();
     $(document).ready(function()
     {

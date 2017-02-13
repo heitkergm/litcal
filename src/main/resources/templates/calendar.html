@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{decorator}">
+<html data-layout-decorate="~{decorator}">
 <head>
-<title th:text="#{calendar.title}"></title>
+<title data-th-text="#{calendar.title}"></title>
 </head>
 <body>
-    <div layout:fragment="content">
+    <div data-layout-fragment="content">
         <div class="center">
-            <p> <span th:text="#{calendar.header}"/> <span th:text="${year}"/>
-                <span th:if="${isLeapYear}">Leap Year</span>
-                <span th:if="${!isLeapYear}">Not Leap Year</span>
-                <span th:text="#{${'day.name' + weekDay}}"></span>
+            <p> <span data-th-text="#{calendar.header}"/> <span data-th-text="${year}"/>
+                <span data-th-if="${isLeapYear}">Leap Year</span>
+                <span data-th-if="${!isLeapYear}">Not Leap Year</span>
+                <span data-th-text="#{${'day.name' + weekDay}}"></span>
             </p>
             <p>
-                <span th:text="Christmas "></span>
-                <span th:text="#{${'day.name' + xmasDay}}"></span>
+                <span data-th-text="Christmas "></span>
+                <span data-th-text="#{${'day.name' + xmasDay}}"></span>
             </p>
             <p>
-                <span th:if="${easterDay le 31}" th:text="'Easter Day is March ' + ${easterDay}"></span>
-                <span th:if="${easterDay gt 31}" th:text="'Easter Day is April ' + ${easterDay - 31}"></span>
+                <span data-th-if="${easterDay le 31}" data-th-text="'Easter Day is March ' + ${easterDay}"></span>
+                <span data-th-if="${easterDay gt 31}" data-th-text="'Easter Day is April ' + ${easterDay - 31}"></span>
             </p>
            <p>
-                <a href="main" class="pure-button pure-button-primary" th:href="@{/main}"
-                   th:text="#{calendar.main}"></a>
+                <a href="main" class="pure-button pure-button-primary" data-th-href="@{/main}"
+                   data-th-text="#{calendar.main}"></a>
             </p>
  	</div>
     </div>
