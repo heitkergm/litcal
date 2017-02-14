@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-layout-decorate="~{decorator}">
 <head>
-<title data-th-text="#{main.title}"></title>
+<title data-th-text="#{main.title}">Title</title>
 </head>
 <body>
     <div data-layout-fragment="content">
@@ -17,8 +17,8 @@
 			    <div class="pure-control-group">
 				    <label data-th-text="#{main.year}"></label>
 				    <input data-th-field="*{year}" min="2000"
-                                           required="true" type="number"
-                                           size="4" maxlength="4" />
+                                           required type="number"
+                                           size="4"/>
 				</div>
 				<div class="pure-controls">
                                     <p class="error" id="errors">

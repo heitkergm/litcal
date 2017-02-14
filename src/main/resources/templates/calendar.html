@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html data-layout-decorate="~{decorator}">
 <head>
-<title data-th-text="#{calendar.title}"></title>
+<title data-th-text="#{calendar.title}">Title</title>
 </head>
 <body>
     <div data-layout-fragment="content">
         <div class="center">
-            <p> <span data-th-text="#{calendar.header}"/> <span data-th-text="${year}"/>
+            <p> <span data-th-text="#{calendar.header}"></span>
+                <span data-th-text="${year}"></span>
                 <span data-th-if="${isLeapYear}">Leap Year</span>
                 <span data-th-if="${!isLeapYear}">Not Leap Year</span>
                 <span data-th-text="#{${'day.name' + weekDay}}"></span>

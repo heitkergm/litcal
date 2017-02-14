@@ -22,8 +22,7 @@
             <span class="bold"> <span data-th-text="#{decorator.header}"></span>
                 <i class="fa fa-calendar fa-lg"></i></span>
         </a>
-            <span data-layout-fragment="menu">
-        <ul  class="pure-menu-list">
+        <ul  class="pure-menu-list" data-layout-fratment="menu">
                 <li class="pure-menu-item">
                         <a onclick="addTheme('blue', 'black')" class="pure-menu-link"
                            data-th-text="#{decorator.theme.black}"
@@ -33,8 +32,7 @@
                            data-th-if="${#themes.code('name')} == 'black'">
                         </a>
                 </li>
-        </ul>
-            </span>
+    </ul>
     </div>
         <div data-layout-fragment="content">content</div>
     <div class="center">
