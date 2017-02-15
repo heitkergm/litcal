@@ -413,6 +413,36 @@
                 <artifactId>maven</artifactId>
                 <version>0.3.4</version>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>nu.validator.client.SimpleCommandLineValidator</mainClass>
+                    <includeProjectDependencies>false</includeProjectDependencies>
+                    <includePluginDependencies>true</includePluginDependencies>
+                    <executableDependency>
+                        <groupId>nu.validator</groupId>
+                        <artifactId>validator</artifactId>
+                    </executableDependency>
+                    <commandlineArgs>src/main/resources/templates</commandlineArgs>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>nu.validator</groupId>
+                        <artifactId>validator</artifactId>
+                        <version>17.2.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
     </build>
 
