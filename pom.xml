@@ -416,14 +416,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>default-cli</id>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <mainClass>nu.validator.client.SimpleCommandLineValidator</mainClass>
                     <includeProjectDependencies>false</includeProjectDependencies>
