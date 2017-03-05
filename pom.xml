@@ -62,18 +62,14 @@
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-pmd-plugin</artifactId>
-                        <version>3.7</version>
-                        <configuration>
-                            <verbose>true</verbose>
-                            <linkXRef>false</linkXRef>
-                        </configuration>
+                        <artifactId>maven-jdeps-plugin</artifactId>
+                        <version>3.0.0</version>
                         <executions>
                             <execution>
                                 <goals>
-                                    <goal>check</goal>
+                                    <goal>jdkinternals</goal>
+                                    <goal>test-jdkinternals</goal>
                                 </goals>
-                                <phase>validate</phase>
                             </execution>
                         </executions>
                     </plugin>
@@ -306,6 +302,7 @@
                                 </bannedDependencies>
                             </rules>
                             <fail>true</fail>
+                            <skip>${skip-checks}</skip>
                         </configuration>
                     </execution>
                 </executions>
@@ -412,6 +409,31 @@
                     <addOutputDirectory>false</addOutputDirectory>
                     <sourceDirectory>src/main/java</sourceDirectory>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>${lombok.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.7</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <linkXRef>false</linkXRef>
+                    <skip>${skip-checks}</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>io.takari</groupId>
