@@ -63,6 +63,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>7.6</checkstyle.version>
+        <groovy.version>2.4.10</groovy.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.2</logback.version>
