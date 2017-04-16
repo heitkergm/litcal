@@ -65,6 +65,7 @@
         <checkstyle.version>7.6.1</checkstyle.version>
         <groovy.version>2.4.10</groovy.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
+        <jackson.version>2.8.8</jackson.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.3</logback.version>
         <lombok.version>1.16.16</lombok.version>
