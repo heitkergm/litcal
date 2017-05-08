@@ -15,48 +15,10 @@
         <version>1.5.3.RELEASE</version>
     </parent>
 
-    <profiles>
-        <profile>
-            <id>skip-checks</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <skip-checks>true</skip-checks>
-            </properties>
-        </profile>
-        <profile>
-            <id>check-for-vnu</id>
-            <activation>
-                <property>
-                    <name>env.VNU_HOME</name>
-                </property>
-            </activation>
-            <properties>
-                <skip-checks>false</skip-checks>
-            </properties>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jdeps-plugin</artifactId>
-                        <version>3.0.0</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>jdkinternals</goal>
-                                    <goal>test-jdkinternals</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-     </profiles>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skip-checks>false</skip-checks>
         <java.version>1.8</java.version>
         <assertj.version>3.6.2</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
@@ -148,6 +110,26 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>nu.validator</groupId>
+            <artifactId>validator</artifactId>
+            <version>17.2.1</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xml-apis</groupId>
+                    <artifactId>xml-apis</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
@@ -271,9 +253,9 @@
                                 <bannedDependencies>
                                     <excludes>
                                         <exclude>commons-logging</exclude>
+                                        <exclude>log4j</exclude>
                                         <exclude>xml-apis</exclude>
                                         <exclude>javax.activation</exclude>
-                                        <exclude>org.slf4j:slf4j-simple</exclude>
                                     </excludes>
                                 </bannedDependencies>
                             </rules>
@@ -404,13 +386,22 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>io.takari</groupId>
-                <artifactId>maven</artifactId>
-                <version>0.4.1</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jdeps-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jdkinternals</goal>
+                            <goal>test-jdkinternals</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -421,15 +412,41 @@
                 </executions>
                 <configuration>
                     <skip>${skip-checks}</skip>
+                    <classpathScope>test</classpathScope>
+                    <addOutputToClasspath>false</addOutputToClasspath>
                     <executable>java</executable>
                     <arguments>
-                        <argument>-jar</argument>
-                        <argument>${VNU_HOME}/dist/vnu.jar</argument>
+                        <argument>-classpath</argument>
+                        <classpath>
+                            <dependency>nu.validator:validator</dependency>
+                            <dependency>com.cybozu.labs:langdetect</dependency>
+                            <dependency>nu.validator:jing</dependency>
+                            <dependency>nu.validator:htmlparser</dependency>
+                            <dependency>nu.validator:galimatias</dependency>
+                            <dependency>org.apache.httpcomponents:httpclient</dependency>
+                            <dependency>org.apache.httpcomponents:httpcore</dependency>
+                            <dependency>org.slf4j:log4j-over-slf4j</dependency>
+                            <dependency>org.slf4j:slf4j-api</dependency>
+                            <dependency>org.slf4j:jcl-over-slf4j</dependency>
+                            <dependency>net.arnx:jsonic</dependency>
+                            <dependency>org.mozilla:rhino</dependency>
+                            <dependency>com.ibm.icu:icu4j</dependency>
+                        </classpath>
+                        <argument>nu.validator.client.SimpleCommandLineValidator</argument>
                         <argument>src/main/resources/templates</argument>
                     </arguments>
                 </configuration>
             </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.takari</groupId>
+                    <artifactId>maven</artifactId>
+                    <version>0.4.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <reporting>
