@@ -36,7 +36,7 @@
         <assertj.version>3.8.0</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>7.7</checkstyle.version>
+        <checkstyle.version>7.8</checkstyle.version>
         <groovy.version>2.4.11</groovy.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
