@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.3.RELEASE</version>
+        <version>1.5.4.RELEASE</version>
     </parent>
 
     <profiles>
@@ -37,7 +37,6 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>7.8.1</checkstyle.version>
-        <groovy.version>2.4.11</groovy.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.3</logback.version>
@@ -46,7 +45,6 @@
         <thymeleaf.version>3.0.6.RELEASE</thymeleaf.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
         <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
-        <tomcat.version>8.5.15</tomcat.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
 
@@ -98,25 +96,25 @@
             <artifactId>webjars-locator</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.webjars.npm</groupId>
+            <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
             <version>4.7.0</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.webjars.npm</groupId>
-            <artifactId>purecss</artifactId>
+            <groupId>org.webjars</groupId>
+            <artifactId>pure</artifactId>
             <version>0.6.2</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.webjars.npm</groupId>
+            <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>3.2.1</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.webjars.npm</groupId>
+            <groupId>org.webjars</groupId>
             <artifactId>jquery-validation</artifactId>
             <version>1.16.0</version>
             <scope>runtime</scope>
