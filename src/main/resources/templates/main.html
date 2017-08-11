@@ -40,13 +40,13 @@
 
     $(document).ready(function()
     {
-        document.getElementById('year').focus();
+        $('#year').focus();
         $("#litcal-form").validate(
         {
             onfocusout: function(element)
             {
                 this.element(element);
-            },    
+            },
             rules:
             {
                 year:
