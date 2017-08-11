@@ -1,7 +1,9 @@
 # litcal
 This is a sample webapp using spring-boot, embedded tomcat, and thymeleaf.
 
-It requires Java 8u121.  OpenJDK is fine, and recommended.  If not, use Oracle
+[![Known Vulnerabilities](https://snyk.io/test/github/heitkergm/litcal/badge.svg)](https://snyk.io/test/github/heitkergm/litcal)
+
+It requires Java 8u141.  OpenJDK is fine, and recommended.  If not, use Oracle
 Java and remove the mission control app.
 
 This is a work in progress.  So it is not nearly done.  The goal is for it to
