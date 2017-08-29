@@ -48,7 +48,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.1</checkstyle.version>
-        <errorprone.version>2.1.0</errorprone.version>
+        <errorprone.version>2.1.1</errorprone.version>
         <hibernate-validator.version>6.0.2.Final</hibernate-validator.version>
         <javax-mail.version>1.6.0</javax-mail.version>
         <javax-validation.version>2.0.0.Final</javax-validation.version>
