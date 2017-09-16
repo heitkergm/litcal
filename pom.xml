@@ -7,6 +7,10 @@
     <version>1.0.0</version>
     <packaging>war</packaging>
 
+    <prerequisites>
+        <maven>3.5.0</maven>
+    </prerequisites>
+
     <name>litcal</name>
 
     <parent>
@@ -320,10 +324,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.4.1</version>
+                <version>3.0.0-M1</version>
                 <executions>
                     <execution>
-                        <id>default-cli</id>
+                        <id>enforce-maven</id>
                         <goals>
                             <goal>enforce</goal>
                         </goals>
@@ -542,7 +546,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>${maven-site</version>
+                <version>${maven-site-plugin.version}</version>
             </plugin>
         </plugins>
     </reporting>
