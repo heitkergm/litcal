@@ -19,7 +19,6 @@ I've implemented a lot of features in the pom.xml:
 * errorprone compiler enhancement
 * lombok
 * maven wrapper
-* tattletale report
 
 The generated javadoc properly uses the delomboked source, and provides the
 appropriate javadoc directives.
