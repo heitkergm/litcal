@@ -6,6 +6,12 @@
     <artifactId>litcal</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
+    <inceptionYear>2016</inceptionYear>
+    
+    <organization>
+        <name>Dappermoose</name>
+        <url>https://www.dappermoose.com</url>
+    </organization>
 
     <prerequisites>
         <maven>3.0.1</maven>
