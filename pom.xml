@@ -60,7 +60,7 @@
         <checkstyle.version>8.7</checkstyle.version>
         <errorprone.version>2.2.0</errorprone.version>
         <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
-        <jackson.version>2.9.3</jackson.version>
+        <jackson.version>2.9.4</jackson.version>
         <javassist.version>3.22.0-GA</javassist.version>
         <javax-mail.version>1.6.0</javax-mail.version>
         <jsonassert.version>1.5.0</jsonassert.version>
