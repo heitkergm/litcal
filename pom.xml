@@ -22,8 +22,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
+        <version>2.0.0.RC1</version>
     </parent>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
 
     <profiles>
         <profile>
@@ -54,32 +67,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>1.8</java.version>
-        <assertj.version>3.9.0</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.8</checkstyle.version>
         <errorprone.version>2.2.0</errorprone.version>
-        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
         <jackson.version>2.9.4</jackson.version>
-        <javassist.version>3.22.0-GA</javassist.version>
-        <javax-mail.version>1.6.0</javax-mail.version>
-        <jsonassert.version>1.5.0</jsonassert.version>
-        <logback.version>1.2.3</logback.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
-        <snakeyaml.version>1.19</snakeyaml.version>
-        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
-        <thymeleaf-extras-java8time.version>3.0.1.RELEASE</thymeleaf-extras-java8time.version>
-        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
-        <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.0.2</maven-dependency-plugin.version>
         <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
         <maven-site-plugin.version>3.7</maven-site-plugin.version>
-        <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.2.0</maven-war-plugin.version>
         <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
     </properties>
@@ -95,8 +95,12 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-java8time</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-properties-migrator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -209,6 +213,14 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
         </dependency>
     </dependencies>
 
@@ -411,7 +423,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>${versions-maven-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -504,7 +515,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${exec-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -530,7 +540,7 @@
                             <dependency>org.apache.httpcomponents:httpcore</dependency>
                             <dependency>org.slf4j:log4j-over-slf4j</dependency>
                             <dependency>org.slf4j:slf4j-api</dependency>
-                            <dependency>org.slf4j:jcl-over-slf4j</dependency>
+                            <dependency>org.springframework:spring-jcl</dependency>
                             <dependency>net.arnx:jsonic</dependency>
                             <dependency>org.mozilla:rhino</dependency>
                             <dependency>com.ibm.icu:icu4j</dependency>

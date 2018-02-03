@@ -9,7 +9,7 @@ import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.theme.CookieThemeResolver;
@@ -20,10 +20,11 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
  * The Class SpringWebConfig.
  */
 @ComponentScan (basePackages = { "com.dappermoose.litcal.formbean",
+        "com.dappermoose.litcal.days",
         "com.dappermoose.litcal.action",
         "com.dappermoose.litcal.init" })
 @Configuration
-public class SpringWebConfig extends WebMvcConfigurerAdapter
+public class SpringWebConfig implements WebMvcConfigurer
 {
     /*
      * (non-Javadoc)

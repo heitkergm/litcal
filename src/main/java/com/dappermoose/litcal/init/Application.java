@@ -42,18 +42,11 @@ public class Application
         recipient = envProp != null ? envProp :
                 ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ());
 
-        if (recipient == null)
-        {
-            System.err.println ("mail.to property not defined and no MAIL_TO environment variable");
-        }
-        else
-        {
-            msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
-            msg.setTo (recipient);
-            msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
-            msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
-            mailer.send (msg);
-        }
+        msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
+        msg.setTo (recipient);
+        msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
+        msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
+        mailer.send (msg);
     }
 
     /**
