@@ -76,6 +76,7 @@
         <javax-mail.version>1.6.1</javax-mail.version>
         <jboss-logging.version>3.3.2.Final</jboss-logging.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
+        <thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>
         <tomcat.version>8.5.28</tomcat.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
