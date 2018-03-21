@@ -329,8 +329,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                     <showDeprecation>true</showDeprecation>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
                     <compilerId>javac-with-errorprone</compilerId>
@@ -375,7 +375,7 @@
                                     <version>3.5.2</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>1.8.0-151</version>
+                                    <version>${java.version}</version>
                                 </requireJavaVersion>
                                 <bannedDependencies>
                                     <excludes>
