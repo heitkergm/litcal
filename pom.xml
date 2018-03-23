@@ -270,6 +270,11 @@
                <artifactId>dom4j</artifactId>
                <version>${org-dom4j.version}</version>
             </dependency>
+            <dependency>
+               <groupId>org.apache.commons</groupId>
+               <artifactId>commons-compress</artifactId>
+               <version>1.16.1</version>
+            </dependency>
        </dependencies>
     </dependencyManagement>
 
