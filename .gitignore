@@ -1,2 +1,4 @@
 /target/
 /nbproject/
+.idea/libraries/
+.idea/workspace.xml

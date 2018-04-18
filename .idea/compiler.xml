@@ -9,5 +9,8 @@
         <module name="litcal" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="litcal" target="9" />
+    </bytecodeTargetLevel>
   </component>
 </project>
