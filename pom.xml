@@ -606,7 +606,6 @@
                 <executions>
                     <execution>
                         <id>snyk-test</id>
-                        <phase>test</phase>
                         <goals>
                             <goal>test</goal>
                         </goals>
