@@ -61,6 +61,7 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.10.1</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
+        <groovy.version>2.5.0</groovy.version>
         <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>
         <lombok.version>1.18.0</lombok.version>
         <org-dom4j.version>2.1.0</org-dom4j.version>
