@@ -62,7 +62,7 @@
         <checkstyle.version>8.11</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
         <groovy.version>2.5.1</groovy.version>
-        <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>
+        <hibernate-validator.version>6.0.11.Final</hibernate-validator.version>
         <httpclient.version>4.5.6</httpclient.version>
         <httpcore.version>4.4.10</httpcore.version>
         <jackson.version>2.9.6</jackson.version>
