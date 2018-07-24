@@ -1,11 +1,11 @@
 package com.dappermoose.litcal.days;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  *  Test the EasterDay class.
@@ -23,7 +23,7 @@ public class EasterDayTest
     /**
      * setup before class instantiation.
      */
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass ()
     {
     }
@@ -31,7 +31,7 @@ public class EasterDayTest
     /**
      * class tear down when done with all tests.
      */
-    @AfterClass
+    @AfterAll
     public static void tearDownClass ()
     {
     }
@@ -39,7 +39,7 @@ public class EasterDayTest
     /**
      * Setup before each test.
      */
-    @Before
+    @BeforeEach
     public void setUp ()
     {
     }
@@ -47,7 +47,7 @@ public class EasterDayTest
     /**
      * Tear down after each test.
      */
-    @After
+    @AfterEach
     public void tearDown ()
     {
     }
@@ -59,6 +59,6 @@ public class EasterDayTest
     public void testCalcDateEaster2016 ()
     {
         System.out.println ("calcDateEaster - 2016");
-        Assert.assertEquals (27, EasterDay.calcEaster (2016));
+        Assertions.assertEquals (27, EasterDay.calcEaster (2016));
     }
 }

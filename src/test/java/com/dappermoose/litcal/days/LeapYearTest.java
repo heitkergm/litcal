@@ -1,11 +1,12 @@
 package com.dappermoose.litcal.days;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 /**
  *  Test the LeapYear class.
@@ -23,7 +24,7 @@ public class LeapYearTest
     /**
      * setup before class instantiation.
      */
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass ()
     {
     }
@@ -31,7 +32,7 @@ public class LeapYearTest
     /**
      * class tear down when done with all tests.
      */
-    @AfterClass
+    @AfterAll
     public static void tearDownClass ()
     {
     }
@@ -39,7 +40,7 @@ public class LeapYearTest
     /**
      * Setup before each test.
      */
-    @Before
+    @BeforeEach
     public void setUp ()
     {
     }
@@ -47,7 +48,7 @@ public class LeapYearTest
     /**
      * Tear down after each test.
      */
-    @After
+    @AfterEach
     public void tearDown ()
     {
     }
@@ -59,7 +60,7 @@ public class LeapYearTest
     public void testIsLeapYear1900 ()
     {
         System.out.println ("isLeapYear - 1900");
-        Assert.assertFalse (LeapYear.isLeapYear (1900));
+        Assertions.assertFalse (LeapYear.isLeapYear (1900));
     }
 
     /**
@@ -69,7 +70,7 @@ public class LeapYearTest
     public void testIsLeapYear2000 ()
     {
         System.out.println ("isLeapYear - 2000");
-        Assert.assertTrue (LeapYear.isLeapYear (2000));
+        Assertions.assertTrue (LeapYear.isLeapYear (2000));
     }
 
     /**
@@ -79,7 +80,7 @@ public class LeapYearTest
     public void testIsLeapYear2016 ()
     {
         System.out.println ("isLeapYear - 2016");
-        Assert.assertTrue (LeapYear.isLeapYear (2016));
+        Assertions.assertTrue (LeapYear.isLeapYear (2016));
     }
 
     /**
@@ -89,7 +90,7 @@ public class LeapYearTest
     public void testIsLeapYear2013 ()
     {
         System.out.println ("isLeapYear - 2013");
-        Assert.assertFalse (LeapYear.isLeapYear (2013));
+        Assertions.assertFalse (LeapYear.isLeapYear (2013));
     }
 
     /**
@@ -99,7 +100,7 @@ public class LeapYearTest
     public void testIsLeapYear2014 ()
     {
         System.out.println ("isLeapYear - 2014");
-        Assert.assertFalse (LeapYear.isLeapYear (2014));
+        Assertions.assertFalse (LeapYear.isLeapYear (2014));
     }
 
     /**
@@ -109,6 +110,6 @@ public class LeapYearTest
     public void testIsLeapYear2015 ()
     {
         System.out.println ("isLeapYear - 2015");
-        Assert.assertFalse (LeapYear.isLeapYear (2015));
+        Assertions.assertFalse (LeapYear.isLeapYear (2015));
     }
 }

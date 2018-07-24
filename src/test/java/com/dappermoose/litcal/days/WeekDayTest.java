@@ -1,11 +1,12 @@
 package com.dappermoose.litcal.days;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 /**
  *  Test the WeekDay class.
@@ -23,7 +24,7 @@ public class WeekDayTest
     /**
      * setup before class instantiation.
      */
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass ()
     {
     }
@@ -31,7 +32,7 @@ public class WeekDayTest
     /**
      * class tear down when done with all tests.
      */
-    @AfterClass
+    @AfterAll
     public static void tearDownClass ()
     {
     }
@@ -39,7 +40,7 @@ public class WeekDayTest
     /**
      * Setup before each test.
      */
-    @Before
+    @BeforeEach
     public void setUp ()
     {
     }
@@ -47,7 +48,7 @@ public class WeekDayTest
     /**
      * Tear down after each test.
      */
-    @After
+    @AfterEach
     public void tearDown ()
     {
     }
@@ -59,7 +60,7 @@ public class WeekDayTest
     public void testCalcDateWeekDayFri20160812 ()
     {
         System.out.println ("calcDate - 2016/08/12");
-        Assert.assertEquals (5, WeekDay.calcWeekDate (2016, 8, 12));
+        Assertions.assertEquals (5, WeekDay.calcWeekDate (2016, 8, 12));
     }
 
     /**
@@ -69,6 +70,6 @@ public class WeekDayTest
     public void testCalcDateWeekDayFri20160101 ()
     {
         System.out.println ("calcDate - 2016/01/01");
-        Assert.assertEquals (5, WeekDay.calcWeekDate (2016, 1, 1));
+        Assertions.assertEquals (5, WeekDay.calcWeekDate (2016, 1, 1));
     }
 }
