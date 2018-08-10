@@ -62,6 +62,7 @@
         <checkstyle.version>8.11</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
         <groovy.version>2.5.1</groovy.version>
+        <hibernate-validator.version>6.0.12.Final</hibernate-validator.version>
         <junit-jupiter.version>5.2.0</junit-jupiter.version>
         <lombok.version>1.18.2</lombok.version>
         <micrometer.version>1.0.6</micrometer.version>
