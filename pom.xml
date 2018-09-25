@@ -53,7 +53,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
-        <java.version>10</java.version>
+        <java.version>11</java.version>
         <asm.version>6.2.1</asm.version>
         <assertj.version>3.11.1</assertj.version>
         <byte-buddy.version>1.8.22</byte-buddy.version>
@@ -282,17 +282,6 @@
                 <version>3.22.0-GA</version>
             </dependency>
             <dependency>
-                <groupId>com.github.com.spotbugs</groupId>
-                <artifactId>spotbugs</artifactId>
-                <version>3.1.6</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>dom4j</groupId>
-                        <artifactId>dom4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
                <groupId>org.dom4j</groupId>
                <artifactId>dom4j</artifactId>
                <version>${org-dom4j.version}</version>
@@ -499,6 +488,17 @@
                         <groupId>org.dom4j</groupId>
                         <artifactId>dom4j</artifactId>
                         <version>${org-dom4j.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.github.spotbugs</groupId>
+                        <artifactId>spotbugs</artifactId>
+                        <version>3.1.7</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>dom4j</groupId>
+                                <artifactId>dom4j</artifactId>
+                            </exclusion>
+                        </exclusions>
                     </dependency>
                 </dependencies>
             </plugin>
