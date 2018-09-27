@@ -64,6 +64,7 @@
         <commons-lang3.version>3.8</commons-lang3.version>
         <groovy.version>2.5.2</groovy.version>
         <hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
+        <jackson.version>2.9.7</jackson.version>
         <javax-mail.version>1.6.2</javax-mail.version>
         <junit-jupiter.version>5.3.1</junit-jupiter.version>
         <lombok.version>1.18.2</lombok.version>
@@ -164,7 +165,7 @@
         <dependency>
             <groupId>org.webjars.npm</groupId>
             <artifactId>jquery-validation</artifactId>
-            <version>1.17.0</version>
+            <version>1.18.0</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
