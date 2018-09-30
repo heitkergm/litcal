@@ -3,6 +3,7 @@ package com.dappermoose.litcal.formbean;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@EqualsAndHashCode
 public class Litcal
 {
     /**
