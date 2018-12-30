@@ -58,7 +58,7 @@
         <byte-buddy.version>1.9.6</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.15</checkstyle.version>
+        <checkstyle.version>8.16</checkstyle.version>
         <groovy.version>2.5.5</groovy.version>
         <jackson.version>2.9.8</jackson.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
