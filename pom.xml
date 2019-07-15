@@ -62,6 +62,7 @@
         <checkstyle.version>8.22</checkstyle.version>
         <classmate.version>1.5.0</classmate.version>
         <commons-lang3.version>3.9</commons-lang3.version>
+        <groovy.version>3.0.0-beta-2</groovy.version>
         <hamcrest.version>2.1</hamcrest.version>
         <jboss-logging.version>3.4.0.Final</jboss-logging.version>
         <junit-jupiter.version>5.5.0</junit-jupiter.version>
@@ -161,6 +162,11 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
@@ -253,11 +259,6 @@
                 <groupId>com.puppycrawl.tools</groupId>
                 <artifactId>checkstyle</artifactId>
                 <version>${checkstyle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.webjars.npm</groupId>
-                <artifactId>jquery</artifactId>
-                <version>3.4.0</version>
             </dependency>
             <dependency>
                 <groupId>net.arnx</groupId>
