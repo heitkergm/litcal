@@ -62,7 +62,7 @@
         <checkstyle.version>8.23</checkstyle.version>
         <classmate.version>1.5.0</classmate.version>
         <commons-lang3.version>3.9</commons-lang3.version>
-        <groovy.version>3.0.0-beta-2</groovy.version>
+        <groovy.version>3.0.0-beta-3</groovy.version>
         <hamcrest.version>2.1</hamcrest.version>
         <jboss-logging.version>3.4.0.Final</jboss-logging.version>
         <junit-jupiter.version>5.5.1</junit-jupiter.version>
@@ -630,7 +630,7 @@
             <plugin>
                 <groupId>io.snyk</groupId>
                 <artifactId>snyk-maven-plugin</artifactId>
-                <version>1.2.2</version>
+                <version>1.2.3</version>
                 <executions>
                     <execution>
                         <id>snyk-test</id>
