@@ -5,3 +5,4 @@ label {font-weight:bold;}
 .button-small {font-size: 90%;}
 .pure-form fieldset{display: inline-block; border: 1px solid silver;}
 table {margin:auto;}
+.navbar {flex-grow: 1; justify-content: center;}
