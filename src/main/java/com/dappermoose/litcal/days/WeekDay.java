@@ -48,7 +48,11 @@ public final class WeekDay
         int b = (13 * m - 1) / 5 + a / 4 + c / 4;
         LOG.debug ("WeekDay.b" + b);
 
-        retVal = Math.abs ((b + a + day - (2 * c)) % 7);
+        retVal = (b + a + day - (2 * c)) % 7;
+        if (retVal < 0)
+        {
+            retVal += 7;
+        }
         LOG.debug ("WeekDay.retVal " + retVal);
 
         return retVal;
