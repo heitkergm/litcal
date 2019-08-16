@@ -18,21 +18,19 @@
     </head>
     <body>
         <nav class="navbar" role="navigation">
-            <div class="navbar-brand">
+            <div class="navbar-brand navbar-center" data-layout-fragment="menu">
                 <a href="main" class="navbar-item" data-th-href="@{/main}">
                     <span class="bold"> <span data-th-text="#{decorator.header}"></span>
                     <i class="fas fa-calendar fa-lg"></i></span>
                 </a>
-                <div data-layout-fragment="menu">
-                    <a onclick="addTheme('blue', 'black')" class="navbar-item"
-                       data-th-text="#{decorator.theme.black}"
-                        data-th-if="${#themes.code('name')} == 'blue'">
-                    </a>
-                    <a onclick="addTheme('black', 'blue')" class="navbar-item"
-                       data-th-text="#{decorator.theme.blue}"
-                       data-th-if="${#themes.code('name')} == 'black'">
-                    </a>
-                </div>
+                <a onclick="addTheme('blue', 'black')" class="navbar-item"
+                   data-th-text="#{decorator.theme.black}"
+                    data-th-if="${#themes.code('name')} == 'blue'">
+                </a>
+                <a onclick="addTheme('black', 'blue')" class="navbar-item"
+                   data-th-text="#{decorator.theme.blue}"
+                   data-th-if="${#themes.code('name')} == 'black'">
+                </a>
             </div>
         </nav>
         <div data-layout-fragment="content">content</div>
