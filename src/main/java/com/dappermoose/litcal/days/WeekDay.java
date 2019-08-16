@@ -49,6 +49,10 @@ public final class WeekDay
         LOG.debug ("WeekDay.b" + b);
 
         retVal = (b + a + day - (2 * c)) % 7;
+        if (retVal < 0)
+        {
+            retVal += 7;
+        }
         LOG.debug ("WeekDay.retVal " + retVal);
 
         return retVal;
