@@ -76,7 +76,6 @@
         <snakeyaml.org>1.25</snakeyaml.org>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <tomcat.version>9.0.24</tomcat.version>
-        <webjars-locator-core.version>0.38</webjars-locator-core.version>
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.6.0</lombok-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
@@ -149,10 +148,6 @@
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
-            <artifactId>webjars-locator-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
             <version>5.10.1</version>
             <scope>runtime</scope>
@@ -172,7 +167,7 @@
         <dependency>
             <groupId>org.webjars.npm</groupId>
             <artifactId>jquery</artifactId>
-            <version>3.4.0</version>
+            <version>3.4.1</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
