@@ -1,4 +1,3 @@
 body {color: black;}
 .navbar-brand a {color: black;}
-.pure-button-primary, .pure-button-selected {background-color: black;}
-a.pure-button-primary, a.pure-button-selected {background-color: black;}
+.button.is-primary {background-color: black;}

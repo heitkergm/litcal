@@ -2,7 +2,7 @@
 .error {color: red; font-weight: normal;}
 label {font-weight:bold;}
 .bold {font-weight: bold;}
-.button-small {font-size: 90%;}
-.pure-form fieldset{display: inline-block; border: 1px solid silver;}
+.button.is-small {font-size: 90%;}
+.field-center {flex-grow: 1; justify-content: center;}
 table {margin:auto;}
 .navbar-center {flex-grow: 1; justify-content: center;}
