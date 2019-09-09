@@ -1,4 +1,3 @@
 body {color: blue;}
-.pure-menu .pure-menu-heading, .pure-menu a {color: blue;}
-.pure-button-primary, .pure-button-selected {background-color: blue;}
-a.pure-button-primary, a.pure-button-selected {background-color: blue;}
+.navbar-brand a {color: blue;}
+.button.is-primary {background-color: blue;}

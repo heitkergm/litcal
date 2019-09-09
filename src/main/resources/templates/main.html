@@ -11,19 +11,22 @@
 		<form data-th-object="${litcal}" autocomplete="off"
 			action="calendar"
 			id="litcal-form" name="litcalform"
-                        data-th-action="@{/calendar}"
-			class="pure-form pure-form-aligned">
+                        data-th-action="@{/calendar}">
 			<fieldset>
-			    <div class="pure-control-group">
-				    <label data-th-text="#{main.year}"></label>
-				    <input data-th-field="*{year}" min="2000"
+			    <div class="field field-center is-horizontal">
+				    <label class="label"
+                                           data-th-text="#{main.year}"></label>
+                                    <div class="control">
+				    <input class="input"
+                                           data-th-field="*{year}" min="2000"
                                            required type="number"
                                            size="4"/>
+                                    </div>
 				</div>
-				<div class="pure-controls">
+				<div class="field">
                                     <p class="error" id="errors">
                                             <span data-th-errors="*{all}"></span></p>
- 				    <button class="pure-button pure-button-primary button-small" type="submit"
+ 				    <button class="button is-primary is-small" type="submit"
                                             data-th-text="#{main.button}">
 			            </button>
                 </div>
