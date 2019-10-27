@@ -2,3 +2,4 @@ body {color: black;}
 .navbar-brand a {color: black;}
 .button.is-primary {background-color: black;}
 .label {color: black;}
+.input:focus {border-color: black;}
