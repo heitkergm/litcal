@@ -12,26 +12,33 @@
 			action="calendar"
 			id="litcal-form" name="litcalform"
                         data-th-action="@{/calendar}">
+                <div class="columns is-centered">
+                <div class="column is-half">
 			<fieldset>
-			    <div class="field field-center is-horizontal">
+			    <div class="field is-horizontal">
+                                    <div class="field-label">
 				    <label class="label"
                                            data-th-text="#{main.year}"></label>
-                                    &nbsp;
+                                    </div>
+                                    <div class="field-body">
+                                    <div class="field is-narrow">
                                     <div class="control">
 				    <input class="input"
                                            data-th-field="*{year}" min="2000"
                                            required type="number"
                                            size="4"/>
                                     </div>
+                                    </div>
+                                    </div>
 				</div>
-				<div class="field">
+			</fieldset>
+               </div>
+               </div>
                                     <p class="error" id="errors">
                                             <span data-th-errors="*{all}"></span></p>
  				    <button class="button is-primary is-small" type="submit"
                                             data-th-text="#{main.button}">
 			            </button>
-                </div>
-			</fieldset>
 		</form>
 	</div>
 
