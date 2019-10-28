@@ -19,11 +19,18 @@
     </head>
     <body>
         <nav class="navbar">
-            <div class="navbar-brand navbar-center" data-layout-fragment="menu">
+            <div class="navbar-brand" data-layout-fragment="menu">
                 <a href="main" class="navbar-item" data-th-href="@{/main}">
                     <span class="bold"> <span data-th-text="#{decorator.header}"></span>
                     <i class="fas fa-calendar fa-lg"></i></span>
                 </a>
+                <a class="navbar-burger burger" data-target="litcalMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div id="litcalMenu" class="navbar-menu">
                 <a onclick="addTheme('blue', 'black')" class="navbar-item"
                    data-th-text="#{decorator.theme.black}"
                     data-th-if="${#themes.code('name')} == 'blue'">
@@ -32,7 +39,6 @@
                    data-th-text="#{decorator.theme.blue}"
                    data-th-if="${#themes.code('name')} == 'black'">
                 </a>
-            </div>
         </nav>
         <script src="webjars/jquery/dist/jquery.min.js" data-th-src="@{/webjars/jquery/dist/jquery.min.js}"></script>
         <script src="webjars/jquery-validation/dist/jquery.validate.min.js"
@@ -42,6 +48,12 @@
             <p data-th-utext="#{decorator.footer}">footer</p>
         </div>
         <script>
+            $(document).ready(function() {
+                $(".navbar-burger").click(function() {
+                    $(".navbar-burger").toggleClass("is-active");
+                    $(".navbar-menu").toggleClass("is-active");
+                });
+            });
             /* <![CDATA[ */
             function addTheme(oldColor, newColor)
             {
