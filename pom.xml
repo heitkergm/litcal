@@ -64,6 +64,7 @@
         <groovy.version>3.0.0-rc-1</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
         <hibernate-validator.version>6.0.18.Final</hibernate-validator.version>
+        <micrometer.version>1.3.1</micrometer.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
@@ -484,7 +485,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>3.1.12</version>
+                        <version>4.0.0-beta4</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
