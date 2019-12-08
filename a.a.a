@@ -1,0 +1,207 @@
+openjdk version "13.0.1" 2019-10-15
+OpenJDK Runtime Environment 19.9 (build 13.0.1+9)
+OpenJDK 64-Bit Server VM 19.9 (build 13.0.1+9, mixed mode, sharing)
+[INFO] Scanning for projects...
+[WARNING] The project com.dappermoose:litcal:war:1.0 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------------------< com.dappermoose:litcal >-----------------------
+[INFO] Building litcal 1.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ litcal ---
+[INFO] Deleting /home/matt/litcal/target
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (validate) @ litcal ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ litcal ---
+[INFO] 
+[INFO] >>> maven-pmd-plugin:3.12.0:check (default) > :pmd @ litcal >>>
+[INFO] 
+[INFO] --- maven-pmd-plugin:3.12.0:pmd (pmd) @ litcal ---
+[INFO] 
+[INFO] <<< maven-pmd-plugin:3.12.0:check (default) < :pmd @ litcal <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-pmd-plugin:3.12.0:check (default) @ litcal ---
+[INFO] 
+[INFO] 
+[INFO] --- exec-maven-plugin:1.6.0:exec (default) @ litcal ---
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (pre-unit-test) @ litcal ---
+[INFO] argLine set to -javaagent:/home/matt/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/home/matt/litcal/target/jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.1:revision (default) @ litcal ---
+[INFO] dotGitDirectory /home/matt/litcal/.git
+[INFO] Collected git.build.user.name with value Matt Heitker
+[INFO] Collected git.build.user.email with value heitkergm@acm.org
+[INFO] Collected git.branch with value master
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[]]
+[INFO] Created map: [{}]
+[INFO] evalCommit is [59a454268d4af70f929ab3d232a225fb66d81ca8]
+[INFO] Collected git.commit.id.describe with value 59a4542-dirty
+[INFO] Collected git.commit.id.describe-short with value 59a4542-dirty
+[INFO] Collected git.commit.id with value 59a454268d4af70f929ab3d232a225fb66d81ca8
+[INFO] Collected git.commit.id.abbrev with value 59a4542
+[INFO] Collected git.dirty with value true
+[INFO] Collected git.commit.user.name with value Matt Heitker
+[INFO] Collected git.commit.user.email with value heitkergm@acm.org
+[INFO] Collected git.commit.message.full with value update versions
+[INFO] Collected git.commit.message.short with value update versions
+[INFO] Collected git.commit.time with value 2019-12-06T15:09:20-0500
+[INFO] Collected git.remote.origin.url with value git@github.com:heitkergm/litcal.git
+[INFO] Collected git.tags with value 
+[INFO] evalCommit is [59a454268d4af70f929ab3d232a225fb66d81ca8]
+[INFO] Tag refs [[]]
+[INFO] Created map: [{}]
+[INFO] Collected git.closest.tag.name with value 
+[INFO] evalCommit is [59a454268d4af70f929ab3d232a225fb66d81ca8]
+[INFO] Tag refs [[]]
+[INFO] Created map: [{}]
+[INFO] Collected git.closest.tag.commit.count with value 
+[INFO] Collected git.total.commit.count with value 530
+[INFO] Collected git.local.branch.ahead with value 0
+[INFO] Collected git.local.branch.behind with value 0
+[INFO] Collected git.build.time with value 2019-12-08T16:14:39-0500
+[INFO] Collected git.build.version with value 1.0
+[INFO] Collected git.build.host with value mattdesktop.dappermoose.com
+[INFO] including property git.tags in results
+[INFO] including property git.closest.tag.commit.count in results
+[INFO] including property git.build.version in results
+[INFO] including property git.commit.user.name in results
+[INFO] including property git.commit.id.abbrev in results
+[INFO] including property git.branch in results
+[INFO] including property git.build.host in results
+[INFO] including property git.commit.id.describe-short in results
+[INFO] including property git.total.commit.count in results
+[INFO] including property git.commit.id.describe in results
+[INFO] including property git.build.user.email in results
+[INFO] including property git.commit.id in results
+[INFO] including property git.commit.message.short in results
+[INFO] including property git.commit.user.email in results
+[INFO] including property git.closest.tag.name in results
+[INFO] including property git.local.branch.ahead in results
+[INFO] including property git.commit.time in results
+[INFO] including property git.local.branch.behind in results
+[INFO] including property git.build.time in results
+[INFO] including property git.build.user.name in results
+[INFO] including property git.dirty in results
+[INFO] including property git.commit.message.full in results
+[INFO] including property git.remote.origin.url in results
+[INFO] Writing properties file to [/home/matt/litcal/target/classes/git.properties] (for module litcal)...
+[INFO] 
+[INFO] --- lombok-maven-plugin:1.18.10.0:delombok (default) @ litcal ---
+[INFO] Delombok complete.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ litcal ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 13 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ litcal ---
+[INFO] Compiling 13 source files to /home/matt/litcal/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ litcal ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/matt/litcal/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ litcal ---
+[INFO] Compiling 4 source files to /home/matt/litcal/target/test-classes
+[INFO] 
+[INFO] >>> spotbugs-maven-plugin:3.1.12.2:check (validate) > :spotbugs @ litcal >>>
+[INFO] 
+[INFO] --- spotbugs-maven-plugin:3.1.12.2:spotbugs (spotbugs) @ litcal ---
+[INFO] Fork Value is true
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs-maven-plugin:3.1.12.2:check (validate) < :spotbugs @ litcal <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs-maven-plugin:3.1.12.2:check (validate) @ litcal ---
+[INFO] BugInstance size is 0
+[INFO] Error size is 0
+[INFO] No errors/warnings found
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M4:test (default-test) @ litcal ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.dappermoose.litcal.days.LeapYearTest
+isLeapYear - 1900
+isLeapYear - 2000
+isLeapYear - 2013
+isLeapYear - 2014
+isLeapYear - 2015
+isLeapYear - 2016
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s - in com.dappermoose.litcal.days.LeapYearTest
+[INFO] Running com.dappermoose.litcal.days.WeekDayTest
+calcDate - 2016/01/01
+16:14:44,613 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+16:14:44,613 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+16:14:44,613 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/matt/litcal/target/classes/logback.xml]
+16:14:44,709 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@1debc91c - Adding [jar:file:/home/matt/.m2/repository/org/springframework/boot/spring-boot/2.2.2.RELEASE/spring-boot-2.2.2.RELEASE.jar!/org/springframework/boot/logging/logback/defaults.xml] to configuration watch list.
+16:14:44,709 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@687e4c93 - URL [jar:file:/home/matt/.m2/repository/org/springframework/boot/spring-boot/2.2.2.RELEASE/spring-boot-2.2.2.RELEASE.jar!/org/springframework/boot/logging/logback/defaults.xml] is not of type file
+16:14:44,711 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+16:14:44,711 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
+16:14:44,711 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wEx with class [org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter]
+16:14:44,715 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.catalina.startup.DigesterFactory] to ERROR
+16:14:44,715 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.catalina.util.LifecycleBase] to ERROR
+16:14:44,715 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.coyote.http11.Http11NioProtocol] to WARN
+16:14:44,715 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.sshd.common.util.SecurityUtils] to WARN
+16:14:44,715 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.tomcat.util.net.NioSelectorPool] to WARN
+16:14:44,715 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.eclipse.jetty.util.component.AbstractLifeCycle] to ERROR
+16:14:44,716 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.hibernate.validator.internal.util.Version] to WARN
+16:14:44,716 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@1debc91c - Adding [jar:file:/home/matt/.m2/repository/org/springframework/boot/spring-boot/2.2.2.RELEASE/spring-boot-2.2.2.RELEASE.jar!/org/springframework/boot/logging/logback/console-appender.xml] to configuration watch list.
+16:14:44,716 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@687e4c93 - URL [jar:file:/home/matt/.m2/repository/org/springframework/boot/spring-boot/2.2.2.RELEASE/spring-boot-2.2.2.RELEASE.jar!/org/springframework/boot/logging/logback/console-appender.xml] is not of type file
+16:14:44,717 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+16:14:44,721 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
+16:14:44,726 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+16:14:44,750 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+16:14:44,750 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
+16:14:44,751 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.springframework.web] to DEBUG
+16:14:44,751 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor] to INFO
+16:14:44,751 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+16:14:44,752 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@76332405 - Registering current configuration as safe fallback point
+calcDate - 2016/08/12
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.177 s - in com.dappermoose.litcal.days.WeekDayTest
+[INFO] Running com.dappermoose.litcal.days.EasterDayTest
+calcDateEaster - 2016
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.dappermoose.litcal.days.EasterDayTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:report (post-unit-test) @ litcal ---
+[INFO] Loading execution data file /home/matt/litcal/target/jacoco.exec
+[INFO] Analyzed bundle 'litcal' with 9 classes
+[INFO] 
+[INFO] --- snyk-maven-plugin:1.2.5:test (snyk-test) @ litcal ---
+Downloading from central: https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api-java9/2.12.1/log4j-api-java9-2.12.1.pom
+[WARNING] The POM for org.apache.logging.log4j:log4j-api-java9:zip:2.12.1 is missing, no dependency information available
+[INFO] ✓ Tested 77 dependencies for known vulnerabilities, no vulnerable paths found.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.3:war (default-war) @ litcal ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [litcal] in [/home/matt/litcal/target/litcal-1.0]
+[INFO] Processing war project
+[INFO] Webapp assembled in [56 msecs]
+[INFO] Building war: /home/matt/litcal/target/litcal-1.0.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.2.RELEASE:repackage (repackage) @ litcal ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.795 s
+[INFO] Finished at: 2019-12-08T16:14:59-05:00
+[INFO] ------------------------------------------------------------------------
