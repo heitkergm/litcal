@@ -60,7 +60,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.28</checkstyle.version>
-        <groovy.version>3.0.0-rc-2</groovy.version>
+        <groovy.version>3.0.0-rc-3</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
         <hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
         <jackson.version>2.10.2</jackson.version>
@@ -486,7 +486,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.0.0-beta4</version>
+                        <version>4.0.0-beta5</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
@@ -619,7 +619,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>5.2.4</version>
+                <version>5.3.0</version>
                 <configuration>
                     <skipProvidedScope>true</skipProvidedScope>
                 </configuration>
