@@ -59,9 +59,11 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.30</checkstyle.version>
-        <groovy.version>3.0.1</groovy.version>
+        <groovy.version>3.0.2</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
         <hibernate-validator.version>6.1.2.Final</hibernate-validator.version>
+        <httpclient.version>4.5.12</httpclient.version>
+        <jackson.version>2.10.3</jackson.version>
         <junit-jupiter.version>5.6.0</junit-jupiter.version>
         <mockito.version>3.3.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
@@ -70,6 +72,7 @@
         <pmd.version>6.21.0</pmd.version>
         <snakeyaml.version>1.26</snakeyaml.version>
         <webjars-locator-core.version>0.44</webjars-locator-core.version>
+        <xmlunit.version>2.6.4</xmlunit.version>
 
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.10.0</lombok-maven-plugin.version>
@@ -616,7 +619,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>5.3.0</version>
+                <version>5.3.1</version>
                 <configuration>
                     <skipProvidedScope>true</skipProvidedScope>
                 </configuration>
