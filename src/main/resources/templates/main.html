@@ -13,7 +13,7 @@
 			id="litcal-form" name="litcalform"
                         data-th-action="@{/calendar}">
                 <div class="columns is-centered">
-                <div class="column is-half">
+                <div class="column is-one-fifth">
 			<fieldset>
 			    <div class="field is-horizontal">
                                     <div class="field-label">
@@ -24,9 +24,8 @@
                                     <div class="field is-narrow">
                                     <div class="control">
 				    <input class="input"
-                                           data-th-field="*{year}" type="text"
-                                           required size="4" maxlength="4"
-                                           pattern="(2[0-9][0-9][0-9])" />
+                                           data-th-field="*{year}" type="number"
+                                           required min="2000" />
                                     </div>
                                     </div>
                                     </div>
