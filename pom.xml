@@ -54,11 +54,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>12</java.version>
-        <asm.version>7.3.1</asm.version>
+        <asm.version>8.0</asm.version>
         <assertj.version>3.15.0</assertj.version>
+        <byte-buddy.version>1.10.9</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.30</checkstyle.version>
+        <checkstyle.version>8.31</checkstyle.version>
         <groovy.version>3.0.2</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
         <hibernate-validator.version>6.1.2.Final</hibernate-validator.version>
@@ -290,7 +291,7 @@
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
-                <version>3.26.0-GA</version>
+                <version>${javassist.version}</version>
             </dependency>
        </dependencies>
     </dependencyManagement>
