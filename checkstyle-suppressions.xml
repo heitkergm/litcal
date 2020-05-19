@@ -4,7 +4,6 @@
      "http://checkstyle.sourceforge.net/dtds/suppressions_1_0.dtd">
 
 <suppressions>
-    <suppress checks="UncommentedMain"
-             files="Application.java"
-             lines="26"/>
+    <suppress checks="UncommentedMain" files="Application.java" lines="26" />
+    <suppress checks="SuppressWarnings" files="MyErrorController.java" lines="37" />
 </suppressions>
