@@ -100,6 +100,21 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-1.2-api</artifactId>
+            <version>${log4j2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -240,10 +255,6 @@
             <artifactId>langdetect</artifactId>
             <version>1.1-20120112</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
         </dependency>
         <dependency>
             <groupId>nz.net.ultraq.thymeleaf</groupId>
@@ -621,8 +632,10 @@
                             <dependency>nu.validator:galimatias</dependency>
                             <dependency>org.apache.httpcomponents:httpclient</dependency>
                             <dependency>org.apache.httpcomponents:httpcore</dependency>
-                            <dependency>org.slf4j:log4j-over-slf4j</dependency>
-                            <dependency>org.slf4j:slf4j-api</dependency>
+                            <dependency>org.apache.logging.log4j:log4j-slf4j-impl</dependency>
+                            <dependency>org.apache.logging.log4j:log4j-api</dependency>
+                            <dependency>org.apache.logging.log4j:log4j-core</dependency>
+                            <dependency>org.apache.logging.log4j:log4j-1.2-api</dependency>
                             <dependency>org.springframework:spring-jcl</dependency>
                             <dependency>net.arnx:jsonic</dependency>
                             <dependency>com.ibm.icu:icu4j</dependency>

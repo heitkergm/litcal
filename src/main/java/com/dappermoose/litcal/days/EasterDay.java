@@ -1,6 +1,6 @@
 package com.dappermoose.litcal.days;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 /**
  * easter day utility.
@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  * @author matt
  */
-@Slf4j
+@Log4j2
 public final class EasterDay
 {
     private EasterDay ()

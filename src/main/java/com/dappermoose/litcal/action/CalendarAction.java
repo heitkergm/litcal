@@ -17,14 +17,14 @@ import com.dappermoose.litcal.days.LeapYear;
 import com.dappermoose.litcal.days.WeekDay;
 import com.dappermoose.litcal.formbean.Litcal;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class LitcalAction.
  */
 @Controller
-@Slf4j
+@Log4j2
 public class CalendarAction
 {
     /** The message source. */
