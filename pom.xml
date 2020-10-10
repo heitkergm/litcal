@@ -62,6 +62,7 @@
         <checkstyle.version>8.36.2</checkstyle.version>
         <groovy.version>3.0.6</groovy.version>
         <hibernate-validator.version>6.1.6.Final</hibernate-validator.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <jackson-bom.version>2.11.3</jackson-bom.version>
         <javassist.version>3.27.0-GA</javassist.version>
         <junit-jupiter.version>5.7.0</junit-jupiter.version>
@@ -73,6 +74,7 @@
         <pmd.version>6.28.0</pmd.version>
         <snakeyaml.version>1.27</snakeyaml.version>
         <thymeleaf-layout-dialect.version>2.5.1</thymeleaf-layout-dialect.version>
+        <tomcat.version>9.0.39</tomcat.version>
         <webjars-locator-core.version>0.46</webjars-locator-core.version>
 
         <!-- plugins -->
