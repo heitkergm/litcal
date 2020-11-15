@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -26,21 +25,6 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 @Configuration
 public class SpringWebConfig implements WebMvcConfigurer
 {
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
-     * #configureDefaultServletHandling(org.springframework.web.servlet.config.
-     * annotation.DefaultServletHandlerConfigurer)
-     */
-    @Override
-    public void configureDefaultServletHandling (
-            final DefaultServletHandlerConfigurer configurer)
-    {
-        configurer.enable ();
-    }
-
     /*
      * (non-Javadoc)
      *
