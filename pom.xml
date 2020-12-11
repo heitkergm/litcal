@@ -59,7 +59,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.38</checkstyle.version>
-        <groovy.version>3.0.6</groovy.version>
+        <groovy.version>3.0.7</groovy.version>
         <tomcat.version>9.0.40</tomcat.version>
         <jackson-bom.version>2.12.0</jackson-bom.version>
         <javassist.version>3.27.0-GA</javassist.version>
