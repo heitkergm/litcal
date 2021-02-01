@@ -19,9 +19,9 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
  * The Class SpringWebConfig.
  */
 @ComponentScan (basePackages = { "com.dappermoose.litcal.formbean",
-        "com.dappermoose.litcal.days",
-        "com.dappermoose.litcal.action",
-        "com.dappermoose.litcal.init" })
+                                 "com.dappermoose.litcal.days",
+                                 "com.dappermoose.litcal.action",
+                                 "com.dappermoose.litcal.init" })
 @Configuration
 public class SpringWebConfig implements WebMvcConfigurer
 {
