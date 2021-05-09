@@ -35,8 +35,9 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.42</checkstyle.version>
         <groovy.version>3.0.8</groovy.version>
+        <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
         <jackson-bom.version>2.12.3</jackson-bom.version>
-        <javassist.version>3.27.0-GA</javassist.version>
+        <javassist.version>3.28.0-GA</javassist.version>
         <json-path.version>2.5.0</json-path.version>
         <log4j2.version>2.14.1</log4j2.version>
         <micrometer.version>1.6.6</micrometer.version>
@@ -504,7 +505,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
+                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
