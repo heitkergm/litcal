@@ -29,15 +29,18 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.43</checkstyle.version>
+        <commons-compress.version>1.20</commons-compress.version>
+        <cssvalidator.version>1.0.8</cssvalidator.version>
         <httpclient5.version>5.1.0</httpclient5.version>
         <javassist.version>3.28.0-GA</javassist.version>
+        <jsonic.version>1.3.10</jsonic.version>
         <junit-jupiter.version>5.8.0-M1</junit-jupiter.version>
         <mockito.version>3.11.0</mockito.version>
-        <org-dom4j.version>2.1.3</org-dom4j.version>
         <plexus-compiler-api.version>2.8.8</plexus-compiler-api.version>
         <plexus-javac.version>2.8.8</plexus-javac.version>
         <pmd.version>6.35.0</pmd.version>
         <slf4j.version>2.0.0-alpha1</slf4j.version>
+        <snakeyaml.version>1.29</snakeyaml.version>
         <webjars-locator-core.version>0.47</webjars-locator-core.version>
 
         <!-- plugins -->
@@ -248,7 +251,7 @@
             <dependency>
                 <groupId>nu.validator</groupId>
                 <artifactId>cssvalidator</artifactId>
-                <version>1.0.8</version>
+                <version>${cssvalidator.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -259,17 +262,12 @@
             <dependency>
                 <groupId>net.arnx</groupId>
                 <artifactId>jsonic</artifactId>
-                <version>1.3.10</version>
-            </dependency>
-            <dependency>
-                <groupId>org.dom4j</groupId>
-                <artifactId>dom4j</artifactId>
-                <version>${org-dom4j.version}</version>
+                <version>${jsonic.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
-                <version>1.18</version>
+                <version>${commons-compress.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.javassist</groupId>
@@ -388,7 +386,6 @@
                                         <exclude>commons-logging</exclude>
                                         <exclude>log4j</exclude>
                                         <exclude>xml-apis</exclude>
-                                        <exclude>dom4j</exclude>
                                         <exclude>junit:junit</exclude>
                                     </excludes>
                                 </bannedDependencies>
@@ -474,20 +471,9 @@
                 </executions>
                 <dependencies>
                     <dependency>
-                        <groupId>org.dom4j</groupId>
-                        <artifactId>dom4j</artifactId>
-                        <version>${org-dom4j.version}</version>
-                    </dependency>
-                    <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
                         <version>4.2.3</version>
-                        <exclusions>
-                            <exclusion>
-                                <groupId>dom4j</groupId>
-                                <artifactId>dom4j</artifactId>
-                            </exclusion>
-                        </exclusions>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -620,7 +606,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>6.2.0</version>
+                <version>6.2.1</version>
                 <configuration>
                     <skip>${skip-checks}</skip>
                     <suppressionFiles>dependency-suppressions.xml</suppressionFiles>
