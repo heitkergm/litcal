@@ -25,7 +25,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
-        <byte-buddy.version>1.11.2</byte-buddy.version>
+        <assertj.version>3.20.2</assertj.version>
+        <byte-buddy.version>1.11.5</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.43</checkstyle.version>
@@ -34,7 +35,8 @@
         <javassist.version>3.28.0-GA</javassist.version>
         <jsonic.version>1.3.10</jsonic.version>
         <junit-jupiter.version>5.8.0-M1</junit-jupiter.version>
-        <mockito.version>3.11.1</mockito.version>
+        <micrometer.version>1.7.1</micrometer.version>
+        <mockito.version>3.11.2</mockito.version>
         <plexus-compiler-api.version>2.8.8</plexus-compiler-api.version>
         <plexus-javac.version>2.8.8</plexus-javac.version>
         <pmd.version>6.35.0</pmd.version>
