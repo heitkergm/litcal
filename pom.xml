@@ -18,7 +18,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.7</version>
+        <version>2.6.8</version>
     </parent>
 
     <properties>
@@ -34,7 +34,6 @@
         <classgraph.version>4.8.146</classgraph.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
         <git-commit-id-plugin5.version>5.0.0</git-commit-id-plugin5.version>
-        <jackson-bom.version>2.13.3</jackson-bom.version>
         <jsonic.version>1.3.10</jsonic.version>
         <junit-jupiter.version>5.9.0-M1</junit-jupiter.version>
         <micrometer.version>1.9.0</micrometer.version>
@@ -44,11 +43,9 @@
         <pmd.version>6.45.0</pmd.version>
         <slf4j.version>1.8.0-beta4</slf4j.version>
         <snakeyaml.version>1.30</snakeyaml.version>
-        <spring-framework.version>5.3.20</spring-framework.version>
         <thymeleaf.version>3.1.0.M2</thymeleaf.version>
         <thymeleaf-extras-springsecurity.version>3.1.0.M1</thymeleaf-extras-springsecurity.version>
         <thymeleaf-layout-dialect.version>3.1.0</thymeleaf-layout-dialect.version>
-        <tomcat.version>9.0.63</tomcat.version>
         <webjars-locator-core.version>0.50</webjars-locator-core.version>
         <xmlunit2.version>2.9.0</xmlunit2.version>
 
@@ -166,7 +163,7 @@
         <dependency>
             <groupId>org.webjars.npm</groupId>
             <artifactId>bulma</artifactId>
-            <version>0.9.3</version>
+            <version>0.9.4</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -300,7 +297,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.6.7</version>
+                <version>2.6.8</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
