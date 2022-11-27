@@ -5,14 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
-import org.springframework.web.servlet.theme.CookieThemeResolver;
-import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
 import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 
@@ -39,7 +36,6 @@ public class SpringWebConfig implements WebMvcConfigurer
     public void addInterceptors (final InterceptorRegistry registry)
     {
         registry.addInterceptor (new LocaleChangeInterceptor ());
-        registry.addInterceptor (new ThemeChangeInterceptor ());
     }
 
     /*
@@ -81,33 +77,6 @@ public class SpringWebConfig implements WebMvcConfigurer
     CookieLocaleResolver localeResolver ()
     {
         final CookieLocaleResolver resolver = new CookieLocaleResolver ();
-        return resolver;
-    }
-
-    // beans for themes
-    /**
-     * Resource bundle theme source.
-     *
-     * @return the resource bundle theme source
-     */
-    @Bean
-    ResourceBundleThemeSource themeSource ()
-    {
-        final ResourceBundleThemeSource themeSource = new ResourceBundleThemeSource ();
-        themeSource.setBasenamePrefix ("themes.");
-        return themeSource;
-    }
-
-    /**
-     * Cookie theme resolver.
-     *
-     * @return the cookie theme resolver
-     */
-    @Bean
-    CookieThemeResolver themeResolver ()
-    {
-        final CookieThemeResolver resolver = new CookieThemeResolver ();
-        resolver.setDefaultThemeName ("blue");
         return resolver;
     }
 

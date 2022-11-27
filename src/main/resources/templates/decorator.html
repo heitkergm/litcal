@@ -15,7 +15,7 @@
         <link type="text/css" rel="stylesheet" href="css/style.css"
               data-th-href="@{/css/style.css}" />
         <link type="text/css" rel="stylesheet" href="css/style-black.css"
-              data-th-href="@{|/css/style-${#themes.code('name')}.css|}" />
+              data-th-href="@{|/css/style-blue.css|}" />
     </head>
     <body>
         <nav class="navbar">
@@ -28,16 +28,6 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                </a>
-            </div>
-            <div id="litcalMenu" class="navbar-menu">
-                <a onclick="addTheme('blue', 'black')" class="navbar-item"
-                   data-th-text="#{decorator.theme.black}"
-                    data-th-if="${#themes.code('name')} == 'blue'">
-                </a>
-                <a onclick="addTheme('black', 'blue')" class="navbar-item"
-                   data-th-text="#{decorator.theme.blue}"
-                   data-th-if="${#themes.code('name')} == 'black'">
                 </a>
             </div>
         </nav>
@@ -55,38 +45,6 @@
                     $(".navbar-menu").toggleClass("is-active");
                 });
             });
-            /* <![CDATA[ */
-            function addTheme(oldColor, newColor)
-            {
-                var url = window.location.href;
-                if(url.indexOf('?')=== -1)
-                {
-                    window.location.href = url + "?theme=" + newColor;
-                }
-                else
-                {
-                    var oldParam = "?theme=" + oldColor;
-                    var newParam = "?theme=" + newColor;
-                    if (url.indexOf(oldParam) >= 0)
-                    {
-                        window.location.href = url.replace(oldParam, newParam);
-                    }
-                    else
-                    {
-                        oldParam = "&theme=" + oldColor;
-                        newParam = "&theme=" + newColor;
-                        if(url.indexOf(oldParam) >= 0)
-                        {
-                            window.location.href = url.replace(oldParam, newParam);
-                        }
-                        else
-                        {
-                            window.location.href = url + newParam;
-                        }
-                    }
-                }
-            }
-            /* ]]> */
         </script>
     </body>
 </html>

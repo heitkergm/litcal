@@ -1,8 +1,8 @@
 package com.dappermoose.litcal.action;
 
-// import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
+// import jakarta.inject.Inject;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 
 // import org.springframework.context.ApplicationContext;
 // import org.springframework.context.MessageSource;
