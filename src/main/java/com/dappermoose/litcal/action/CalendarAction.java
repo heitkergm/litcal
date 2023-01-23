@@ -57,7 +57,7 @@ public class CalendarAction
         }
 
         Integer year = litcal.getYear ();
-        LOG.debug ("year is " + year);
+        log.debug ("year is " + year);
         model.addAttribute ("year", year);
         model.addAttribute ("isLeapYear", LeapYear.isLeapYear (year));
         model.addAttribute ("weekDay", WeekDay.calcWeekDate (year, 1, 1));
