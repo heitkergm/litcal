@@ -57,6 +57,7 @@ public class CalendarAction
         }
 
         Integer year = litcal.getYear ();
+        // deepcode ignore LogLevelCheck:
         log.debug ("year is " + year);
         model.addAttribute ("year", year);
         model.addAttribute ("isLeapYear", LeapYear.isLeapYear (year));

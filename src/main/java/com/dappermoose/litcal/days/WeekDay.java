@@ -40,6 +40,7 @@ public final class WeekDay
         {
             m -= 2;
         }
+        // file deepcode ignore LogLevelCheck:
         log.debug ("WeekDay.m " + m);
         int c = y / 100;
         log.debug ("WeekDay.c " + c);

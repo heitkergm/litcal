@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.lang.NonNull;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -33,7 +34,7 @@ public class SpringWebConfig implements WebMvcConfigurer
      * InterceptorRegistry)
      */
     @Override
-    public void addInterceptors (final InterceptorRegistry registry)
+    public void addInterceptors (final @NonNull InterceptorRegistry registry)
     {
         registry.addInterceptor (new LocaleChangeInterceptor ());
     }
@@ -47,7 +48,7 @@ public class SpringWebConfig implements WebMvcConfigurer
      * ViewControllerRegistry)
      */
     @Override
-    public void addViewControllers (final ViewControllerRegistry registry)
+    public void addViewControllers (final @NonNull ViewControllerRegistry registry)
     {
         registry.addRedirectViewController ("/", "/main");
     }
