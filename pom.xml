@@ -24,14 +24,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
-        <java.version>21</java.version>
-        <aspectj.version>1.9.21.2</aspectj.version>
+        <java.version>22</java.version>
+        <aspectj.version>1.9.22</aspectj.version>
         <assertj.version>3.25.3</assertj.version>
         <awaitility.version>4.2.1</awaitility.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>10.14.2</checkstyle.version>
-        <classgraph.version>4.8.165</classgraph.version>
+        <classgraph.version>4.8.168</classgraph.version>
         <classmate.version>1.7.0</classmate.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
         <jackson-bom.version>2.17.0</jackson-bom.version>
@@ -41,7 +41,7 @@
         <mockito.version>5.11.0</mockito.version>
         <plexus-compiler-api.version>2.15.0</plexus-compiler-api.version>
         <plexus-compiler-javac.version>2.15.0</plexus-compiler-javac.version>
-        <pmd.version>6.55.0</pmd.version>
+        <pmd.version>7.0.0</pmd.version>
         <webjars-locator-core.version>0.58</webjars-locator-core.version>
 
         <!-- plugins -->
@@ -535,12 +535,27 @@
                 <dependencies>
                     <dependency>
                         <groupId>net.sourceforge.pmd</groupId>
-                        <artifactId>pmd-java</artifactId>
+                        <artifactId>pmd-compat6</artifactId>
                         <version>${pmd.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>net.sourceforge.pmd</groupId>
                         <artifactId>pmd-core</artifactId>
+                        <version>${pmd.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sourceforge.pmd</groupId>
+                        <artifactId>pmd-java</artifactId>
+                        <version>${pmd.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sourceforge.pmd</groupId>
+                        <artifactId>pmd-javascript</artifactId>
+                        <version>${pmd.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sourceforge.pmd</groupId>
+                        <artifactId>pmd-jsp</artifactId>
                         <version>${pmd.version}</version>
                     </dependency>
                 </dependencies>
