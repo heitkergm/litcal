@@ -18,48 +18,40 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.6</version>
+        <version>3.4.2</version>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>23</java.version>
-        <assertj.version>3.26.3</assertj.version>
-        <byte-buddy.version>1.15.10</byte-buddy.version>
+        <assertj.version>3.27.3</assertj.version>
+        <byte-buddy.version>1.16.1</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>10.20.1</checkstyle.version>
+        <checkstyle.version>10.21.1</checkstyle.version>
         <classgraph.version>4.8.172</classgraph.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
-        <jackson-bom.version>2.18.1</jackson-bom.version>
         <jsonic.version>1.3.10</jsonic.version>
-        <junit-jupiter.version>5.11.3</junit-jupiter.version>
-        <log4j2.version>2.24.1</log4j2.version>
-        <micrometer.version>1.14.1</micrometer.version>
-        <mockito.version>5.14.2</mockito.version>
+        <mockito.version>5.15.2</mockito.version>
         <plexus-compiler-api.version>2.15.0</plexus-compiler-api.version>
         <plexus-compiler-javac.version>2.15.0</plexus-compiler-javac.version>
-        <pmd.version>7.7.0</pmd.version>
-        <snakeyaml.version>2.3</snakeyaml.version>
-        <webjars-locator-core.version>0.59</webjars-locator-core.version>
-        <xmlunit2.version>2.10.0</xmlunit2.version>
+        <pmd.version>7.9.0</pmd.version>
 
         <!-- plugins -->
         <exec-maven-plugin.version>3.5.0</exec-maven-plugin.version>
-        <git-commit-id-maven-plugin.version>9.0.1</git-commit-id-maven-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
-        <maven-clean-plugin.version>3.4.0</maven-clean-plugin.version>
-        <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
-        <maven-help-plugin.version>3.5.1</maven-help-plugin.version>
-        <maven-javadoc-plugin.version>3.11.1</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
         <maven-site-plugin.version>3.21.0</maven-site-plugin.version>
-	<maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
         <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+        </dependency>
         <dependency>
             <groupId>jakarta.inject</groupId>
             <artifactId>jakarta.inject-api</artifactId>
@@ -72,32 +64,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.logging.log4j</groupId>
-                    <artifactId>log4j-slf4j-impl</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-1.2-api</artifactId>
-            <version>${log4j2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j2-impl</artifactId>
-            <version>${log4j2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -152,7 +118,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
-            <version>6.6.0</version>
+            <version>6.7.1</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -307,7 +273,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.3.6</version>
+                <version>3.4.2</version>
                 <configuration>
                     <addResources>true</addResources>
                     <!--
@@ -405,8 +371,6 @@
                                 </requireJavaVersion>
                                 <bannedDependencies>
                                     <excludes>
-                                        <exclude>commons-logging</exclude>
-                                        <exclude>log4j</exclude>
                                         <exclude>xml-apis</exclude>
                                         <exclude>junit:junit</exclude>
                                     </excludes>
@@ -443,7 +407,7 @@
                         <link>https://docs.oracle.com/en/java/javase/${java.version}/docs/api/</link>
                         <link>https://docs.spring.io/spring-boot/api/java/</link>
                         <link>https://docs.spring.io/spring-framework/docs/current/javadoc-api/</link>
-                        <link>https://jakarta.ee/specifications/platform/8/apidocs/</link>
+                        <link>https://jakarta.ee/specifications/platform/10/apidocs/</link>
                     </links>
                     <sourcepath>src/main/java</sourcepath>
                     <linksource>true</linksource>
@@ -498,7 +462,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.8.6</version>
+                        <version>4.9.0</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -572,6 +536,7 @@
                     <addOutputToClasspath>false</addOutputToClasspath>
                     <executable>${JAVA_HOME}/bin/java</executable>
                     <arguments>
+                        <argument>-Dlogback.configurationFile=logback-nuvalidator.xml</argument>
                         <argument>-classpath</argument>
                         <classpath>
                             <dependency>nu.validator:validator</dependency>
@@ -581,9 +546,10 @@
                             <dependency>nu.validator:galimatias</dependency>
                             <dependency>org.apache.httpcomponents:httpclient</dependency>
                             <dependency>org.apache.httpcomponents:httpcore</dependency>
-                            <dependency>org.apache.logging.log4j:log4j-1.2-api</dependency>
-                            <dependency>org.apache.logging.log4j:log4j-api</dependency>
-                            <dependency>org.apache.logging.log4j:log4j-core</dependency>
+                            <dependency>org.slf4j:log4j-over-slf4j</dependency>
+                            <dependency>org.slf4j:slf4j-api</dependency>
+                            <dependency>ch.qos.logback:logback-classic</dependency>
+                            <dependency>ch.qos.logback:logback-core</dependency>
                             <dependency>org.springframework:spring-jcl</dependency>
                             <dependency>net.arnx:jsonic</dependency>
                             <dependency>com.ibm.icu:icu4j</dependency>
@@ -608,7 +574,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>11.1.0</version>
+                <version>12.0.1</version>
                 <configuration>
                     <autoUpdate>false</autoUpdate>
                     <failOnError>false</failOnError>
