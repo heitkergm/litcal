@@ -36,7 +36,7 @@
         <mockito.version>5.15.2</mockito.version>
         <plexus-compiler-api.version>2.15.0</plexus-compiler-api.version>
         <plexus-compiler-javac.version>2.15.0</plexus-compiler-javac.version>
-        <pmd.version>7.9.0</pmd.version>
+        <pmd.version>7.10.0</pmd.version>
 
         <!-- plugins -->
         <exec-maven-plugin.version>3.5.0</exec-maven-plugin.version>
