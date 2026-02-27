@@ -31,7 +31,6 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>13.0.0</checkstyle.version>
 	<classgraph.version>4.8.184</classgraph.version>
-        <groovy.version>5.0.4</groovy.version>
         <hibernate-validator.version>9.1.0.Final</hibernate-validator.version>
         <logback.version>1.5.26</logback.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
