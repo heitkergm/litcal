@@ -41,7 +41,7 @@
         <mockito.version>5.21.0</mockito.version>
         <plexus-compiler-api.version>2.16.2</plexus-compiler-api.version>
         <plexus-compiler-javac.version>2.16.2</plexus-compiler-javac.version>
-        <pmd.version>7.20.0</pmd.version>
+        <pmd.version>7.22.0</pmd.version>
         <tomcat.version>11.0.18</tomcat.version>
         <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
         <xmlunit2.version>2.11.0</xmlunit2.version>
